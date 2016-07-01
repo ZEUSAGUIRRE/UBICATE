@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:id="@+id/Ventana_login"
+    tools:context="com.example.tecnoparque4.prototipo.Activity_Login">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/Imagen_logo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:text="@string/Crear_finca"
+            android:gravity="center"
+            style="@style/Label"
+            android:layout_below="@+id/Imagen_logo"
+            android:layout_marginTop="10dp"/>
+
+         <Spinner
+            android:id="@+id/spinner"
+            style="@style/Spinner"
+            android:entries="@array/Fincas"
+             android:layout_marginTop="10dp"/>
+
+        <Button
+           style="@style/Boton"
+            android:text="Entrar"
+            android:id="@+id/Btn_Entrar"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/Fincas"/>
+
+        <Button
+            android:id="@+id/Btn_Crear_Finca"
+            style="@style/Boton"
+            android:text="Crear Nueva Finca"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/Btn_Entrar"/>
+
+        <LinearLayout
+            android:id="@+id/Layou_Finca"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <EditText
+                style="@style/Cajas_Texto"
+                android:hint="Digite el Nombre"
+                android:layout_height="40dp"
+                android:textSize="20dp"/>
+
+            <Button
+                style="@style/Boton"
+                android:text="Crear"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_Blanco"
+                android:textColor="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

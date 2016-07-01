@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Prototipo</string>
+    <string name="Crear_finca">Seleccione Finca o Cree una</string>
+
+    <string-array name="Fincas">
+        <item>Finca 1</item>
+        <item>Finca 2</item>
+        <item>Finca 3</item>
+        <item>Finca 4</item>
+        <item>Finca 5</item>
+        <item>Finca 6</item>
+    </string-array>
+
+</resources>
