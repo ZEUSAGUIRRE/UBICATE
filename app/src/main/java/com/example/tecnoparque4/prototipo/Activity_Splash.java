@@ -33,6 +33,7 @@ public class Activity_Splash extends Activity {
     public void ComenzarAnimacion(RelativeLayout ventana,RelativeLayout Anim){
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.alp);
         animation.reset();
+
         RelativeLayout L =  ventana;//(RelativeLayout)findViewById(R.id.ventana_splash);
         L.clearAnimation();
 
