@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">Prototipo</string>
+    <string name="app_name">Prototipo SACAM</string>
     <string name="Crear_finca">Seleccione Finca o Cree una</string>
+    <string name="Btn_finca">Crear Nueva Finca</string>
+    <string name="Dialogo">Crear Nueva Finca</string>
+    <string name="Guardar">Guardar</string>
+    <string name="Cancelar">Cancelar</string>
 
     <string-array name="Fincas">
         <item>Finca 1</item>

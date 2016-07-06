@@ -1,5 +1,6 @@
 package com.example.tecnoparque4.prototipo;
 
+import android.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,19 +20,16 @@ public class Activity_Login extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.login);
 
 
-        Frag = (LinearLayout)findViewById(R.id.Layou_Finca);
-        Frag.setVisibility(View.INVISIBLE);
+//        Frag = (LinearLayout)findViewById(R.id.Layou_Finca);
+//        Frag.setVisibility(View.INVISIBLE);
         Button Nuevo = (Button)findViewById(R.id.Btn_Crear_Finca);
         Nuevo.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        Frag.setVisibility(View.VISIBLE);
-//        AlertDialog alertDialog;
-//        alertDialog = new AlertDialog.Builder(this).create();
-//        alertDialog.setTitle("Nuevo");
-//        alertDialog.setMessage("Mensaje de Dialogo");
-//        alertDialog.show();
+        FragmentManager fragmentManager = getFragmentManager();
+        My_Dialogo my_dialogo = new My_Dialogo();
+        my_dialogo.show(fragmentManager,"My_Dialogo");
     }
 }

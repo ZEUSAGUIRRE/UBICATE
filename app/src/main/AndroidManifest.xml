@@ -22,7 +22,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_Nueva_Finca" />
         <activity android:name=".Mi_dialogo"></activity>
     </application>
 

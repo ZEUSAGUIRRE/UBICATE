@@ -23,7 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:src="@mipmap/ic_launcher"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"/>
 
         <TextView
             android:id="@+id/textView"
@@ -49,34 +50,9 @@
         <Button
             android:id="@+id/Btn_Crear_Finca"
             style="@style/Boton"
-            android:text="Crear Nueva Finca"
-            android:layout_marginTop="10dp"
+            android:text="@string/Btn_finca"
+            android:layout_marginTop="80dp"
             android:layout_below="@+id/Btn_Entrar"/>
-
-        <LinearLayout
-            android:id="@+id/Layou_Finca"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical"
-            android:padding="5dp"
-            android:background="@color/colorPrimary"
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
-
-            <EditText
-                style="@style/Cajas_Texto"
-                android:hint="Digite el Nombre"
-                android:layout_height="40dp"
-                android:textSize="20dp"/>
-
-            <Button
-                style="@style/Boton"
-                android:text="Crear"
-                android:layout_marginTop="5dp"
-                android:background="@color/color_Blanco"
-                android:textColor="@color/colorPrimary"
-                />
-
-        </LinearLayout>
 
     </LinearLayout>
     </ScrollView>
