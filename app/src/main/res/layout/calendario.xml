@@ -1,10 +1,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/color_Blanco"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:layout_height="match_parent"
     tools:context=".Fragmentos.Calendario">
 
     <!-- TODO: Update blank fragment layout -->
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,4 +36,20 @@
             android:layout_toEndOf="@+id/imageView2" />
     </RelativeLayout>
 
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+
+
+    </LinearLayout>
+</ScrollView>
 </LinearLayout>

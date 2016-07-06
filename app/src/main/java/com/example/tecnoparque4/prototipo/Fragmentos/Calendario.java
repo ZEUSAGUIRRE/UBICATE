@@ -17,7 +17,7 @@ public class Calendario extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.calendario, container, false);
+     View vista =  inflater.inflate(R.layout.calendario, container, false);
+     return vista;
     }
 }
