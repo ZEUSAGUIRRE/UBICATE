@@ -4,35 +4,35 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/Actividades"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@mipmap/actividades"
             android:title="@string/Actividades_Diarias" />
         <item
             android:id="@+id/Recordatorios"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@mipmap/recordatorio"
             android:title="@string/Recordatorios" />
         <item
             android:id="@+id/Inconvenientes"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/inconvenientes"
             android:title="@string/Inconvenientes" />
         <item
             android:id="@+id/Reporte_Gastos"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@mipmap/gastos"
             android:title="@string/Reporte_Gastos" />
         <item
             android:id="@+id/Ganancias"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@mipmap/ganancias"
             android:title="@string/Ganancias_Perdidas" />
         <item
             android:id="@+id/Cambiar_Contraseña"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@mipmap/contrasena"
             android:title="@string/Cambiar_Contraseña" />
         <item
             android:id="@+id/Borrar_todo"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@mipmap/borrar"
             android:title="@string/Borrar_Todo" />
         <item
             android:id="@+id/Acerca_de"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@mipmap/informacion"
             android:title="@string/Acerca_de" />
     </group>
 </menu>

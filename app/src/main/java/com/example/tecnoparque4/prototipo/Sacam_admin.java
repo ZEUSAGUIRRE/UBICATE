@@ -2,6 +2,7 @@ package com.example.tecnoparque4.prototipo;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -16,30 +17,42 @@ import android.view.MenuItem;
 import android.widget.DatePicker;
 import android.widget.Toast;
 
+import com.example.tecnoparque4.prototipo.Fragmentos.Actividades;
+import com.example.tecnoparque4.prototipo.Fragmentos.Fragment_Base;
+import com.example.tecnoparque4.prototipo.Fragmentos.Gastos;
+import com.example.tecnoparque4.prototipo.Fragmentos.Inconvenientes;
+import com.example.tecnoparque4.prototipo.Fragmentos.Recordatorios;
+
 import java.util.Calendar;
 
 public class Sacam_admin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    int año,mes,dia;
-    static final int Dilog_id=0;
+//    int año,mes,dia;
+//    static final int Dilog_id=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sacam_admin);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
+
+//-----------------Barra Superior
+//Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//setSupportActionBar(toolbar);
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        drawer.setDrawerListener(toggle);
+//        toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-               //---------------------codigo prueba
+        Fragment_Base fragmentBase = new Fragment_Base();
+        FragmentTransaction fragmentTransaction= getFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container,fragmentBase).commit();
+
+       //---------------------codigo prueba
 //        CalendarView car = (CalendarView)findViewById(R.id.calendarView);
 //        car.setOnDateChangeListener((CalendarView.OnDateChangeListener) Sacam_admin. this);
 //        final Calendar cal = Calendar.getInstance();
@@ -98,20 +111,19 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        Fragment fragment=null;
+
         int id = item.getItemId();
 
-        if (id == R.id.Actividades) {
-            FragmentManager fragmentManager = getFragmentManager();
-            FragmentTransaction transaction = fragmentManager.beginTransaction();
-            Calendario fragment = new Calendario();
-            transaction.add(R.id.Layout_Principal,fragment).commit();
+        if (id == R.id.Actividades) { fragment = new Actividades();
 
-        } else if (id == R.id.Recordatorios) {
+        } else if (id == R.id.Recordatorios) { fragment = new Recordatorios();
 
-        } else if (id == R.id.Inconvenientes) {
+        } else if (id == R.id.Inconvenientes) { fragment = new Inconvenientes();
 
-        } else if (id == R.id.Reporte_Gastos) {
+        } else if (id == R.id.Reporte_Gastos) { fragment = new Gastos();
 
         } else if (id == R.id.Ganancias) {
 
@@ -122,6 +134,8 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
         }else if (id == R.id.Acerca_de) {
 
         }
+        transaction.replace(R.id.fragment_container,fragment).commit();
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
