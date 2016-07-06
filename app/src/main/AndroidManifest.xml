@@ -22,7 +22,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Mi_dialogo"></activity>
+        <activity android:name=".Mi_dialogo" />
+        <activity
+            android:name=".Sacam_admin"
+            android:label="@string/title_activity_sacam_admin"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.example.tecnoparque4.prototipo;
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import android.widget.RelativeLayout;
 
 public class Activity_Login extends AppCompatActivity implements View.OnClickListener{
 
-    Button Dialogo;
+    Button Btn_FInca,Btn_Entrar;
     LinearLayout Frag;
 
     @Override
@@ -19,17 +20,34 @@ public class Activity_Login extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        Btn_Entrar = (Button)findViewById(R.id.Btn_Entrar);
+        Btn_FInca = (Button)findViewById(R.id.Btn_Crear_Finca);
 
-//        Frag = (LinearLayout)findViewById(R.id.Layou_Finca);
-//        Frag.setVisibility(View.INVISIBLE);
-        Button Nuevo = (Button)findViewById(R.id.Btn_Crear_Finca);
-        Nuevo.setOnClickListener(this);
+        Btn_Entrar.setOnClickListener(this);
+        Btn_FInca.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        FragmentManager fragmentManager = getFragmentManager();
-        My_Dialogo my_dialogo = new My_Dialogo();
-        my_dialogo.show(fragmentManager,"My_Dialogo");
+
+        switch (v.getId()){
+           case R.id.Btn_Entrar:
+               Intent intent = new Intent(Activity_Login.this,Sacam_admin.class);
+               startActivity(intent);
+               break;
+            case R.id.Btn_Crear_Finca:
+                FragmentManager fragmentManager = getFragmentManager();
+                My_Dialogo my_dialogo = new My_Dialogo();
+                my_dialogo.show(fragmentManager,"My_Dialogo");
+                break;
+        }
+
+
+
+
+
+
+
+
     }
 }

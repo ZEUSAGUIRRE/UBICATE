@@ -27,28 +27,33 @@
             android:layout_below="@+id/text"
             android:layout_marginTop="10dp"/>
 
-        <Button
-            style="@style/Boton"
-            android:text="@string/Guardar"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_below="@+id/txt_finca"
-            android:id="@+id/button"
-            android:layout_marginLeft="30dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|bottom" />
+            android:layout_below="@+id/txt_finca">
 
+            <Button
+                style="@style/Boton"
+                android:text="@string/Guardar"
+                android:layout_below="@+id/txt_finca"
+                android:id="@+id/button"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1" />
 
-        <Button
-            style="@style/Boton"
-            android:text="@string/Cancelar"
-            android:layout_marginLeft="50dp"
-            android:layout_width="wrap_content"
-            android:layout_alignTop="@+id/button"
-            android:layout_toRightOf="@+id/button"
-            android:layout_toEndOf="@+id/button"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|bottom" />
+            <Button
+                style="@style/Boton"
+                android:text="@string/Cancelar"
+                android:layout_alignTop="@+id/button"
+                android:layout_toRightOf="@+id/button"
+                android:layout_toEndOf="@+id/button"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
     </RelativeLayout>
 
 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Actividades"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/Actividades_Diarias" />
+        <item
+            android:id="@+id/Recordatorios"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/Recordatorios" />
+        <item
+            android:id="@+id/Inconvenientes"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/Inconvenientes" />
+        <item
+            android:id="@+id/Reporte_Gastos"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/Reporte_Gastos" />
+        <item
+            android:id="@+id/Ganancias"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/Ganancias_Perdidas" />
+        <item
+            android:id="@+id/Cambiar_Contraseña"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/Cambiar_Contraseña" />
+        <item
+            android:id="@+id/Borrar_todo"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/Borrar_Todo" />
+        <item
+            android:id="@+id/Acerca_de"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/Acerca_de" />
+    </group>
+</menu>

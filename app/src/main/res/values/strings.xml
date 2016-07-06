@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Prototipo SACAM</string>
+    <string name="app_name">SACAM</string>
     <string name="Crear_finca">Seleccione Finca o Cree una</string>
     <string name="Btn_finca">Crear Nueva Finca</string>
     <string name="Dialogo">Crear Nueva Finca</string>
@@ -7,6 +7,7 @@
     <string name="Cancelar">Cancelar</string>
 
     <string-array name="Fincas">
+        <item>Seleccione una Finca</item>
         <item>Finca 1</item>
         <item>Finca 2</item>
         <item>Finca 3</item>
@@ -14,5 +15,24 @@
         <item>Finca 5</item>
         <item>Finca 6</item>
     </string-array>
+
+    <string name="title_activity_sacam_admin">Nombre Finca</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Configuración</string>
+
+    <!--_______________________Opciones de Menu_______________________________-->
+
+
+    <string name="Actividades_Diarias">Actividades Diarias</string>
+    <string name="Recordatorios">Alertas o Recordatorios</string>
+    <string name="Inconvenientes">Reporte de Inconvenientes</string>
+    <string name="Reporte_Gastos">Reporte de Gastos</string>
+    <string name="Ganancias_Perdidas">Ganancias y Pérdidas</string>
+    <string name="Cambiar_Contraseña">Cambiar Contraseña</string>
+    <string name="Borrar_Todo">Borrar Todo</string>
+    <string name="Acerca_de">Acerca de SACAM</string>
+
+
 
 </resources>
