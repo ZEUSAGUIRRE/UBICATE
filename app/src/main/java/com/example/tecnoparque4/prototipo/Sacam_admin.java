@@ -17,8 +17,12 @@ import android.view.MenuItem;
 import android.widget.DatePicker;
 import android.widget.Toast;
 
+import com.example.tecnoparque4.prototipo.Fragmentos.Acerca_de;
 import com.example.tecnoparque4.prototipo.Fragmentos.Actividades;
+import com.example.tecnoparque4.prototipo.Fragmentos.Borrar;
+import com.example.tecnoparque4.prototipo.Fragmentos.Contrasena;
 import com.example.tecnoparque4.prototipo.Fragmentos.Fragment_Base;
+import com.example.tecnoparque4.prototipo.Fragmentos.Ganancias;
 import com.example.tecnoparque4.prototipo.Fragmentos.Gastos;
 import com.example.tecnoparque4.prototipo.Fragmentos.Inconvenientes;
 import com.example.tecnoparque4.prototipo.Fragmentos.Recordatorios;
@@ -125,13 +129,13 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
 
         } else if (id == R.id.Reporte_Gastos) { fragment = new Gastos();
 
-        } else if (id == R.id.Ganancias) {
+        } else if (id == R.id.Ganancias) { fragment = new Ganancias();
 
-        } else if (id == R.id.Cambiar_Contraseña) {
+        } else if (id == R.id.Cambiar_Contraseña) { fragment = new Contrasena();
 
-        }else if (id == R.id.Borrar_todo) {
+        }else if (id == R.id.Borrar_todo) { fragment = new Borrar();
 
-        }else if (id == R.id.Acerca_de) {
+        }else if (id == R.id.Acerca_de) { fragment = new Acerca_de();
 
         }
         transaction.replace(R.id.fragment_container,fragment).commit();
