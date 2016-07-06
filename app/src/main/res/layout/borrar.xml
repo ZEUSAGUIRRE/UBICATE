@@ -5,11 +5,30 @@
     tools:context="com.example.tecnoparque4.prototipo.Fragmentos.Borrar">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/Borrar_Todo"
-        android:gravity="center"
-        android:textSize="50sp"/>
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/borrar"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Borrar_Todo"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView2"
+            android:layout_toEndOf="@+id/imageView2" />
+    </RelativeLayout>
 
 </FrameLayout>

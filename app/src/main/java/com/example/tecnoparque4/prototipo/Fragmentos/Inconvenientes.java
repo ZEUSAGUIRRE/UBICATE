@@ -21,7 +21,7 @@ public class Inconvenientes extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-View vista = inflater.inflate(R.layout.fragment_inconvenientes, container, false);
+View vista = inflater.inflate(R.layout.inconvenientes, container, false);
 
         return vista;
     }

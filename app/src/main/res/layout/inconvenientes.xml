@@ -2,10 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.tecnoparque4.prototipo.Fragmentos.Acerca_de">
+    tools:context="com.example.tecnoparque4.prototipo.Fragmentos.Inconvenientes">
 
     <!-- TODO: Update blank fragment layout -->
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -15,13 +14,13 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:src="@mipmap/informacion"
+            android:src="@mipmap/inconvenientes"
             android:id="@+id/imageView2" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/Acerca_de"
+            android:text="@string/Inconvenientes"
             android:gravity="center"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -31,6 +30,5 @@
             android:layout_toRightOf="@+id/imageView2"
             android:layout_toEndOf="@+id/imageView2" />
     </RelativeLayout>
-
 
 </FrameLayout>
