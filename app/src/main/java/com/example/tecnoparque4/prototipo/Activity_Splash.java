@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -27,10 +29,10 @@ public class Activity_Splash extends Activity {
         setContentView(R.layout.activity__splash);
         Activity a = new Activity_Splash();
         RelativeLayout ven = (RelativeLayout)findViewById(R.id.ventana_splash);
-        RelativeLayout ani = (RelativeLayout)findViewById(R.id.Layou_logo);
+        LinearLayout ani = (LinearLayout) findViewById(R.id.Layou_logo);
         ComenzarAnimacion(ven,ani);
     }
-    public void ComenzarAnimacion(RelativeLayout ventana,RelativeLayout Anim){
+    public void ComenzarAnimacion(RelativeLayout ventana,LinearLayout Anim){
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.alp);
         animation.reset();
 
@@ -41,7 +43,7 @@ public class Activity_Splash extends Activity {
 
         animation = AnimationUtils.loadAnimation(this,R.anim.traslate);
         animation.reset();
-        RelativeLayout Logotipo = Anim;//(RelativeLayout) findViewById(R.id.Layou_logo);
+        LinearLayout Logotipo = Anim;//(RelativeLayout) findViewById(R.id.Layou_logo);
         Logotipo.clearAnimation();
         Logotipo.startAnimation(animation);
 

@@ -6,6 +6,8 @@
     <string name="Dialogo">Crear Nueva Finca</string>
     <string name="Guardar">Guardar</string>
     <string name="Cancelar">Cancelar</string>
+    <string name="Contraseña">Contraseña:</string>
+    <string name="Ingresar">Ingresar</string>
 
     <string-array name="Fincas">
         <item>Seleccione una Finca</item>
@@ -22,7 +24,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Configuración</string>
 
-<!--_______________________Opciones de Menu_______________________________-->
+    <!--_______________________Opciones de Menu_______________________________-->
     <string name="Actividades_Diarias">Actividades Diarias</string>
     <string name="Recordatorios">Alertas o Recordatorios</string>
     <string name="Inconvenientes">Reporte de Inconvenientes</string>
@@ -32,9 +34,7 @@
     <string name="Borrar_Todo">Borrar Todo</string>
     <string name="Acerca_de">Acerca de SACAM</string>
     <string name="Calendario">Calendario</string>
-
-
-
+    <string name="Guardar_Contraseña">Guardar Contraseña</string>
 
 
 </resources>

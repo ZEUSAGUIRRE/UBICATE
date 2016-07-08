@@ -26,7 +26,8 @@
         <activity
             android:name=".Sacam_admin"
             android:label="@string/title_activity_sacam_admin"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Fincas"></activity>
     </application>
 
 </manifest>

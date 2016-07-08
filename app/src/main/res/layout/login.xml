@@ -5,55 +5,79 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
+    android:background="@drawable/fondo"
     android:id="@+id/Ventana_login"
     tools:context="com.example.tecnoparque4.prototipo.Activity_Login">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <ImageView
             android:id="@+id/Imagen_logo"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:src="@mipmap/ic_launcher"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="40dp"/>
+            android:layout_marginBottom="30dp"/>
 
-        <TextView
-            android:id="@+id/textView"
-            android:text="@string/Crear_finca"
-            android:gravity="center"
-            style="@style/Label"
-            android:layout_below="@+id/Imagen_logo"
-            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_Blanco"
+            android:alpha="0.8"
+            android:padding="10dp"
+            android:orientation="vertical">
 
-         <Spinner
-            android:id="@+id/spinner"
-            style="@style/Spinner"
-            android:entries="@array/Fincas"
-            android:layout_marginTop="30dp"/>
+            <TextView
+                android:id="@+id/textView"
+                android:text="@string/Contraseña"
+                android:gravity="left"
+                android:textColor="@color/color_negro"
+                style="@style/Label"
+                android:layout_below="@+id/Imagen_logo"
+                android:layout_marginBottom="30dp"/>
 
-        <Button
-           style="@style/Boton"
-            android:text="Entrar"
-            android:id="@+id/Btn_Entrar"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/Fincas"/>
+            <EditText
+                android:id="@+id/txt_password"
+                style="@style/Cajas_Texto"
+                android:background="@color/color_negro"
+                android:inputType="textPassword"
+                android:textColor="@color/color_Blanco"
+                android:layout_marginBottom="30dp"/>
 
-        <Button
-            android:id="@+id/Btn_Crear_Finca"
-            style="@style/Boton"
-            android:text="@string/Btn_finca"
-            android:layout_marginTop="80dp"
-            android:layout_below="@+id/Btn_Entrar"/>
+            <Button
+                style="@style/Boton"
+                android:text="@string/Ingresar"
+                android:id="@+id/Btn_Entrar_login"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/Fincas"
+                android:layout_marginBottom="30dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/Label"
+                    android:background="@color/color_Blanco"
+                    android:id="@+id/checkBox"/>
+                <TextView
+                    style="@style/Label"
+                    android:textColor="@color/color_negro"
+                    android:text="@string/Guardar_Contraseña"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
-    </ScrollView>
+
+
+</ScrollView>
 
 </LinearLayout>

@@ -1,10 +1,50 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:padding="20dp"
     tools:context="com.example.tecnoparque4.prototipo.Fragmentos.Fragment_Base">
 
-    <!-- TODO: Update blank fragment layout -->
+
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:columnCount="2"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:alpha="0.8"
+            android:src="@mipmap/lotes"
+            android:background="@color/color_negro"
+            android:layout_margin="5dp"
+            android:layout_columnWeight="1"/>
 
 
-</FrameLayout>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@color/color_negro"
+            android:src="@mipmap/insumos"
+            android:alpha="0.8"
+            android:layout_margin="5dp"
+            android:layout_columnWeight="1"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@color/color_negro"
+            android:src="@mipmap/bodega"
+            android:alpha="0.8"
+            android:layout_margin="5dp"
+            android:layout_columnWeight="1"/>
+
+
+    </GridLayout>
+
+
+
+</LinearLayout>

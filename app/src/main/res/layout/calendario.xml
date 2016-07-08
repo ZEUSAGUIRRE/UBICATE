@@ -47,9 +47,7 @@
         android:layout_height="match_parent"
         android:padding="5dp"
         android:orientation="vertical">
-
-
-
+|
     </LinearLayout>
 </ScrollView>
 </LinearLayout>
