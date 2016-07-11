@@ -1,4 +1,5 @@
 <resources>
+    <!--_______________________Botones y Mensajes_______________________________-->
     <string name="app_name">SACAM</string>
     <string name="SACAM">Sistema de Administración de Cultivo de Arroz Móvil</string>
     <string name="Crear_finca">Seleccione Finca o Cree una</string>
@@ -6,9 +7,42 @@
     <string name="Dialogo">Crear Nueva Finca</string>
     <string name="Guardar">Guardar</string>
     <string name="Cancelar">Cancelar</string>
+
+    <string name="Usuario">Usuario:</string>
     <string name="Contraseña">Contraseña:</string>
     <string name="Ingresar">Ingresar</string>
 
+    <string name="Lotes">Lotes o \nHectáreas</string>
+    <string name="Insumos">Ingresar \nInsumos </string>
+    <string name="Inventario">Inventario \nde Bodega</string>
+
+
+    <!--_______________________fragmento lotes_______________________________-->
+    <string name="Nombre">Nombre del Lote o Hectárea:</string>
+    <string name="Digite_nombre">Digite el Nombre </string>
+    <string name="Número_de_Hectareas">Número de Hectáreas</string>
+    <string name="Digite_numero">N° Lotes o Hectáreas</string>
+    <string name="Estado">Estado:</string>
+    <string name="Estado_string">Siembra, Macollamiento etc...</string>
+
+    <!--_______________________fragmento insumos_______________________________-->
+
+    <string name="Tipo">Tipo de Insumo:</string>
+    <string name="Tipo_string">Insecticida, Fungicida etc...</string>
+    <string name="Nombre_Insumo">Nombre de Insumo:</string>
+    <string name="Insumo_string">Úrea, Pólvora, Propanil etc...</string>
+    <string name="Cantidad_Insumo">Cantidad:</string>
+    <string name="Presentación_Insumo">Presentación:</string>
+    <string name="Presentación_string">CC, GR, Ton, Kg</string>
+    <string name="Precio_unitario">Precio Unitario:</string>
+
+
+    <!--_______________________fragmento Inventario_______________________________-->
+    <string name="Buscar">Buscar:</string>
+    <string name="Buscar_string">Digite el Nombre del Insumo</string>
+
+
+    <!--_______________________Cargar todas las fincas en la BD_______________________________-->
     <string-array name="Fincas">
         <item>Seleccione una Finca</item>
         <item>Finca 1</item>
@@ -19,12 +53,14 @@
         <item>Finca 6</item>
     </string-array>
 
+    <!--_______________________Barra de Menu_________________________________-->
     <string name="title_activity_sacam_admin">Nombre Finca</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Configuración</string>
 
     <!--_______________________Opciones de Menu_______________________________-->
+    <string name="Ir_A_Principal">Ir  a Principal</string>
     <string name="Actividades_Diarias">Actividades Diarias</string>
     <string name="Recordatorios">Alertas o Recordatorios</string>
     <string name="Inconvenientes">Reporte de Inconvenientes</string>
@@ -35,6 +71,9 @@
     <string name="Acerca_de">Acerca de SACAM</string>
     <string name="Calendario">Calendario</string>
     <string name="Guardar_Contraseña">Guardar Contraseña</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

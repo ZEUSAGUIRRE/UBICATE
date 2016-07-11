@@ -84,7 +84,10 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
 
         int id = item.getItemId();
 
-               if (id == R.id.Actividades) {
+        if (id == R.id.Home) {
+            fragment = new Fragment_Base();
+
+        } else  if (id == R.id.Actividades) {
                     fragment = new Actividades();
 
         } else if (id == R.id.Recordatorios) {

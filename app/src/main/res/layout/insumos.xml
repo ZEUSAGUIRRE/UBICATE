@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragmentos.Insumos"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_negro"
+        android:alpha="0.7"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    style="@style/Label"
+                    android:textColor="@color/color_Blanco"
+                    android:text="@string/Tipo"/>
+
+                <EditText
+                    style="@style/Cajas_Texto"
+                    android:hint="@string/Tipo_string"
+                    android:inputType="text"
+                    android:background="@drawable/bordes_estilo"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    style="@style/Label"
+                    android:textColor="@color/color_Blanco"
+                    android:text="@string/Nombre_Insumo"/>
+
+                <EditText
+                    style="@style/Cajas_Texto"
+                    android:inputType="number"
+                    android:hint="@string/Insumo_string"
+                    android:background="@drawable/bordes_estilo"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    style="@style/Label"
+                    android:textColor="@color/color_Blanco"
+                    android:text="@string/Cantidad_Insumo"/>
+
+                <EditText
+                    style="@style/Cajas_Texto"
+                    android:inputType="number"
+                    android:background="@drawable/bordes_estilo"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    style="@style/Label"
+                    android:textColor="@color/color_Blanco"
+                    android:text="@string/Presentación_Insumo"/>
+
+                <EditText
+                    style="@style/Cajas_Texto"
+                    android:hint="@string/Presentación_string"
+                    android:background="@drawable/bordes_estilo"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    style="@style/Label"
+                    android:textColor="@color/color_Blanco"
+                    android:text="@string/Precio_unitario"/>
+
+                <EditText
+                    style="@style/Cajas_Texto"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/bordes_estilo"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        style="@style/Boton"
+                        android:layout_margin="5dp"
+                        android:text="@string/Guardar"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        style="@style/Boton"
+                        android:layout_margin="5dp"
+                        android:text="@string/Cancelar"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
