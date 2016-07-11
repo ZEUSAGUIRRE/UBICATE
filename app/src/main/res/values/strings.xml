@@ -40,6 +40,8 @@
     <!--_______________________fragmento Inventario_______________________________-->
     <string name="Buscar">Buscar:</string>
     <string name="Buscar_string">Digite el Nombre del Insumo</string>
+    <string name="Puntos">...................</string>
+    <string name="Atrás">Atrás</string>
 
 
     <!--_______________________Cargar todas las fincas en la BD_______________________________-->

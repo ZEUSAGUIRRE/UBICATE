@@ -73,8 +73,5 @@
                 android:text="@string/Cancelar"
                 android:layout_weight="1" />
         </LinearLayout>
-
     </RelativeLayout>
-
-
 </LinearLayout>

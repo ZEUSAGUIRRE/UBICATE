@@ -8,9 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-
 import com.example.tecnoparque4.prototipo.R;
-
 import static com.example.tecnoparque4.prototipo.R.id.fragment_container;
 
 public class Fragment_Base extends Fragment implements View.OnClickListener {
@@ -57,8 +55,7 @@ public class Fragment_Base extends Fragment implements View.OnClickListener {
                 fragment = new Inventario();
                 transaction.replace(fragment_container,fragment).commit();
                 break;
-
-
         }
     }
+
 }
