@@ -36,7 +36,7 @@ public class Activity_Login extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
 
-        if (contras.getText().toString().equals("zeus")){
+        if (contras.getText().toString().equals("")){
                Intent intent = new Intent(Activity_Login.this,Fincas.class);
                startActivity(intent);
         }else{

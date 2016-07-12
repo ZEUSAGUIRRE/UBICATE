@@ -3,6 +3,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/Home"
+            android:icon="@mipmap/home"
+            android:title="@string/Ir_A_Principal"/>
+        <item
             android:id="@+id/Actividades"
             android:icon="@mipmap/actividades"
             android:title="@string/Actividades_Diarias" />

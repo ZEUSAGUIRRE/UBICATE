@@ -1,37 +1,40 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context="com.example.tecnoparque4.prototipo.Fragmentos.Actividades">
 
-
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/cabecera"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:padding="10dp"
+        android:orientation="horizontal"
+        android:alpha="0.7"
         android:background="@color/colorPrimary">
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
+            android:layout_width="140dp"
+            android:layout_height="80dp"
             android:src="@mipmap/actividades"
-            android:id="@+id/imageView2" />
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal|center_vertical"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            style="@style/Label"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:text="@string/Actividades_Diarias"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="45dp"
-            android:layout_marginStart="45dp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/imageView2"
-            android:layout_toEndOf="@+id/imageView2" />
-    </RelativeLayout>
+            android:gravity="center"/>
+    </LinearLayout>
 
 
+<LinearLayout
+    android:layout_below="@+id/cabecera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_negro"
+    android:alpha="0.7">
 
-
-</FrameLayout>
+</LinearLayout>
+</RelativeLayout>

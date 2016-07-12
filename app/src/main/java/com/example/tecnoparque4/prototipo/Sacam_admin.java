@@ -29,7 +29,6 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sacam_admin);
 
-
 //-----------------Barra Superior
 //          Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //          setSupportActionBar(toolbar);
@@ -38,14 +37,12 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
 //          this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 //          drawer.setDrawerListener(toggle);
 //          toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         Fragment_Base fragmentBase = new Fragment_Base();
         FragmentTransaction fragmentTransaction= getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container,fragmentBase).commit();
-
     }
 
     @Override
@@ -84,7 +81,10 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
 
         int id = item.getItemId();
 
-               if (id == R.id.Actividades) {
+        if (id == R.id.Home ) {
+            fragment = new Fragment_Base();
+
+        } else  if (id == R.id.Actividades) {
                     fragment = new Actividades();
 
         } else if (id == R.id.Recordatorios) {
@@ -114,4 +114,15 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+    public void atras(){
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        Fragment fragmento = new Fragment_Base();
+        transaction.replace(R.id.fragment_container,fragmento).commit();
+    }
+
+
+
 }

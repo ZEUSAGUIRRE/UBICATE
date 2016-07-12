@@ -2,49 +2,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
-    android:padding="20dp"
+    android:background="@drawable/background"
+    android:orientation="vertical"
     tools:context="com.example.tecnoparque4.prototipo.Fragmentos.Fragment_Base">
 
-
-    <GridLayout
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:columnCount="2"
-        android:layout_weight="1">
+        android:orientation="vertical"
+        android:background="@color/color_negro"
+        android:padding="20dp"
+        android:alpha="0.8">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:alpha="0.8"
-            android:src="@mipmap/lotes"
-            android:background="@color/color_negro"
-            android:layout_margin="5dp"
-            android:layout_columnWeight="1"/>
+       <LinearLayout
+           android:id="@+id/Layout_lotes"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/bordes_estilo"
+           android:layout_weight="1"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:layout_marginBottom="10dp"
+           android:alpha="0.8">
 
+           <ImageView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:src="@mipmap/lotes"
+               android:layout_weight="1" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:background="@color/color_negro"
+           <TextView
+               style="@style/Label"
+               android:text="@string/Lotes"
+               android:layout_width="wrap_content"
+               android:gravity="center"
+               android:layout_weight="1" />
+       </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout_insumos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordes_estilo"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.8">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:src="@mipmap/insumos"
-            android:alpha="0.8"
-            android:layout_margin="5dp"
-            android:layout_columnWeight="1"/>
+            android:layout_weight="1" />
 
-        <ImageButton
+        <TextView
+            style="@style/Label"
+            android:text="@string/Insumos"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:background="@color/color_negro"
+            android:gravity="center"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout_Inventario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordes_estilo"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.8">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:src="@mipmap/bodega"
-            android:alpha="0.8"
-            android:layout_margin="5dp"
-            android:layout_columnWeight="1"/>
+            android:layout_weight="1" />
 
+        <TextView
+            style="@style/Label"
+            android:text="@string/Inventario"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1" />
+    </LinearLayout>
 
-    </GridLayout>
-
-
+    </LinearLayout>
 
 </LinearLayout>
