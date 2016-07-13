@@ -33,6 +33,7 @@
                     android:text="@string/Tipo"/>
 
                 <EditText
+                    android:id="@+id/txt_Tipo_Insumo"
                     style="@style/Cajas_Texto"
                     android:hint="@string/Tipo_string"
                     android:inputType="text"
@@ -45,6 +46,7 @@
                     android:text="@string/Nombre_Insumo"/>
 
                 <EditText
+                    android:id="@+id/txt_Nombre_Insumo"
                     style="@style/Cajas_Texto"
                     android:inputType="text"
                     android:hint="@string/Insumo_string"
@@ -57,6 +59,7 @@
                     android:text="@string/Cantidad_Insumo"/>
 
                 <EditText
+                    android:id="@+id/txt_Can_Insumo"
                     style="@style/Cajas_Texto"
                     android:inputType="number"
                     android:background="@drawable/bordes_estilo"/>
@@ -68,6 +71,7 @@
                     android:text="@string/Presentación_Insumo"/>
 
                 <EditText
+                    android:id="@+id/txt_Presentacion"
                     style="@style/Cajas_Texto"
                     android:hint="@string/Presentación_string"
                     android:background="@drawable/bordes_estilo"/>
@@ -79,6 +83,7 @@
                     android:text="@string/Precio_unitario"/>
 
                 <EditText
+                    android:id="@+id/txt_Precio_Insumo"
                     style="@style/Cajas_Texto"
                     android:inputType="numberDecimal"
                     android:background="@drawable/bordes_estilo"/>
@@ -90,6 +95,7 @@
                     android:orientation="horizontal">
 
                     <Button
+                        android:id="@+id/Btn_Guardar_Insumo"
                         style="@style/Boton"
                         android:layout_margin="5dp"
                         android:text="@string/Guardar"
