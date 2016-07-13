@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/color_negro"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.example.tecnoparque4.prototipo.Fragmentos.Frag_Maquinaria">
+
+    <TextView
+        style="@style/Label"
+        android:textColor="@color/color_Blanco"
+        android:text="@string/Descripcion_Actividad"/>
+
+    <EditText
+        style="@style/Cajas_Texto"
+        android:inputType="text"
+        android:hint="@string/Tractor_string"
+        android:background="@drawable/bordes_estilo"/>
+
+    <TextView
+        style="@style/Label"
+        android:textColor="@color/color_Blanco"
+        android:text="@string/Cantidad_Jornales"/>
+
+    <EditText
+        style="@style/Cajas_Texto"
+        android:inputType="number"
+        android:background="@drawable/bordes_estilo"/>
+
+    <TextView
+        style="@style/Label"
+        android:textColor="@color/color_Blanco"
+        android:text="@string/Numero_Hectareas"/>
+
+    <EditText
+        style="@style/Cajas_Texto"
+        android:inputType="number"
+        android:background="@drawable/bordes_estilo"/>
+
+    <TextView
+        style="@style/Label"
+        android:textColor="@color/color_Blanco"
+        android:text="@string/Precio_Obra"
+        android:hint="@string/$$$"/>
+
+    <EditText
+        style="@style/Cajas_Texto"
+        android:inputType="number"
+        android:background="@drawable/bordes_estilo"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/Boton"
+            android:layout_margin="5dp"
+            android:text="@string/Agregar"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/Btn_Atras"
+            style="@style/Boton"
+            android:layout_margin="5dp"
+            android:text="@string/Cancelar"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

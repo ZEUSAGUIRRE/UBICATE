@@ -1,0 +1,108 @@
+<resources>
+    <!--_______________________Botones y Mensajes_______________________________-->
+    <string name="app_name">SACAM</string>
+    <string name="SACAM">Sistema de Administración de Cultivo de Arroz Móvil</string>
+    <string name="Crear_finca">Seleccione Finca o Cree una</string>
+    <string name="Btn_finca">Crear Nueva Finca</string>
+    <string name="Dialogo">Crear Nueva Finca</string>
+    <string name="Guardar">Guardar</string>
+    <string name="Cancelar">Cancelar</string>
+
+    <string name="Usuario">Usuario:</string>
+    <string name="Contraseña">Contraseña:</string>
+    <string name="Antigua_Contraseña">Antigua Contraseña:</string>
+    <string name="Nueva_Contraseña">Nueva Contraseña:</string>
+    <string name="Ingresar">Ingresar</string>
+
+    <string name="Lotes">Lotes o \nHectáreas</string>
+    <string name="Insumos">Ingresar \nInsumos </string>
+    <string name="Inventario">Inventario \nde Bodega</string>
+
+
+    <!--_______________________fragmento lotes_______________________________-->
+    <string name="Nombre">Nombre del Lote o Hectárea:</string>
+    <string name="Digite_nombre">Digite el Nombre </string>
+    <string name="Digite_N_hectarea">Digite el Nombre Del Lote</string>
+    <string name="Número_de_Hectareas">Número de Hectáreas</string>
+    <string name="Digite_numero">N° Lotes o Hectáreas</string>
+    <string name="Estado">Estado:</string>
+    <string name="Estado_string">Siembra, Macollamiento etc...</string>
+
+    <!--_______________________fragmento insumos_______________________________-->
+
+    <string name="Tipo">Tipo de Insumo:</string>
+    <string name="Tipo_string">Insecticida, Fungicida etc...</string>
+    <string name="Nombre_Insumo">Nombre de Insumo:</string>
+    <string name="Digite_Nombre_Insumo">Digite el Nombre del Insumo</string>
+    <string name="Insumo_string">Úrea, Pólvora, Propanil etc...</string>
+    <string name="Cantidad_Insumo">Cantidad:</string>
+    <string name="Presentación_Insumo">Presentación:</string>
+    <string name="Presentación_string">CC, GR, Ton, Kg</string>
+    <string name="Precio_unitario">Precio Unitario:</string>
+
+
+    <!--_______________________fragmento Inventario_______________________________-->
+    <string name="Buscar">Buscar:</string>
+    <string name="Buscar_string">Digite el Nombre del Insumo</string>
+    <string name="Puntos">...................</string>
+    <string name="Atrás">Atrás</string>
+
+    <!--_______________________Botones_______________________________-->
+
+    <string name="Primero">◄</string>
+    <string name="Siguiente">▼</string>
+    <string name="Anterior">▲</string>
+    <string name="Ultimo">►</string>
+
+    <!--______________________fragment Recursos lotes_______________________________-->
+    <string name="Aceptar">Aceptar</string>
+    <string name="Descripcion_Actividad">Descripción de la Actividad:</string>
+    <string name="Actividad_string">Pajareo, Control Malezas etc...</string>
+
+
+    <!--_______________________Cargar todas las fincas en la BD_______________________________-->
+    <string-array name="Fincas">
+        <item>Seleccione una Finca</item>
+        <item>Finca 1</item>
+        <item>Finca 2</item>
+        <item>Finca 3</item>
+        <item>Finca 4</item>
+        <item>Finca 5</item>
+        <item>Finca 6</item>
+    </string-array>
+
+    <!--_______________________Barra de Menu_________________________________-->
+    <string name="title_activity_sacam_admin">Nombre Finca</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Configuración</string>
+
+    <!--_______________________Opciones de Menu_______________________________-->
+    <string name="Ir_A_Principal">Ir  a Principal</string>
+    <string name="Actividades_Diarias">Actividades Diarias</string>
+    <string name="Recordatorios">Alertas o Recordatorios</string>
+    <string name="Inconvenientes">Reporte de Inconvenientes</string>
+    <string name="Reporte_Gastos">Reporte de Gastos</string>
+    <string name="Ganancias_Perdidas">Ganancias y Pérdidas</string>
+    <string name="Cambiar_Contraseña">Cambiar Contraseña</string>
+    <string name="Borrar_Todo">Borrar Todo</string>
+    <string name="Acerca_de">Acerca de SACAM</string>
+    <string name="Calendario">Calendario</string>
+    <string name="Guardar_Contraseña">Guardar Contraseña</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Agregar">Agregar</string>
+    <string name="Cantidad_Jornales">Cantidad de Jornales:</string>
+    <string name="Mano_Obra">Topógrafo, Jornal, Juan</string>
+    <string name="Numero_Hectareas">Número de Hectareas a Trabajar:</string>
+    <string name="Precio_Obra">Precio por Hectárea</string>
+    <string name="$$$">$ $ $ $</string>
+    <string name="Seleccione_Opcion">Seleccione  Opciones de Gastos</string>
+    <string name="Tractor_string">Rastra, etc...</string>
+    <string name="Descripcion_Gasto">Descripción del Gasto</string>
+    <string name="Otro_gasto">Servicios, Comida etc...</string>
+    <string name="Precio">Precio</string>
+
+
+</resources>

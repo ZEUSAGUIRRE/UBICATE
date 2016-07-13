@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/contenedor_contraseña"
+    android:background="@drawable/background"
+    tools:context="com.example.tecnoparque4.prototipo.Fragmentos.Contrasena">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:alpha="0.7">
+
+        <ImageView
+            style="@style/Label"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/contrasena"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            style="@style/Label"
+            android:text="@string/Cambiar_Contraseña"
+            android:layout_gravity="center_horizontal|center_vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_negro"
+        android:alpha="0.6"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            style="@style/Label"
+            android:text="@string/Antigua_Contraseña"
+            android:textColor="@color/color_Blanco"
+            android:alpha="1"/>
+
+        <EditText
+            style="@style/Cajas_Texto"
+            android:inputType="textPassword"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            style="@style/Label"
+            android:text="@string/Nueva_Contraseña"
+            android:textColor="@color/color_Blanco"
+            android:alpha="1"/>
+
+        <EditText
+            android:inputType="textPassword"
+            style="@style/Cajas_Texto"/>
+
+        <Button
+            android:id="@+id/btn_cambiar_contrasena"
+            android:layout_marginTop="40dp"
+            style="@style/Boton"
+            android:text="@string/Aceptar"/>
+        <Button
+            android:id="@+id/btn_atras_contras"
+            android:layout_marginTop="20dp"
+            style="@style/Boton"
+            android:text="@string/Cancelar"/>
+    </LinearLayout>
+
+</LinearLayout>
