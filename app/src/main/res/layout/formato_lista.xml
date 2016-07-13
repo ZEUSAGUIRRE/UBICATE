@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.tecnoparque4.prototipo.Fragmentos.Formato_lista">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="text1"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="text2"
+        android:layout_weight="1" />
+    <TextView
+        android:id="@+id/text_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="text3"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/text_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="text4"
+        android:layout_weight="1" />
+    <TextView
+        android:id="@+id/text_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="text5"
+        android:layout_weight="1" />
+</LinearLayout>

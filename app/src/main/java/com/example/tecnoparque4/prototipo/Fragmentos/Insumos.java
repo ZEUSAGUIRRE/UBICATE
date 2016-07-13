@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +51,7 @@ public class Insumos extends Fragment implements View.OnClickListener {
         Atras = (Button) vista.findViewById(R.id.Btn_Atras);
 
         // Acciones de los Botones
-        Atras.setOnClickListener(this);
+//        Atras.setOnClickListener(this);
         Btn_Guardar_Insumo.setOnClickListener(this);
 
         return vista;
@@ -71,17 +72,17 @@ public class Insumos extends Fragment implements View.OnClickListener {
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.M)
+//    @TargetApi(Build.VERSION_CODES.M)
     private void Guardar_Insumo() {
         DataBaseManager manager = new DataBaseManager(getActivity());
         String Col_1 = txt_Tipo_Insumo.getText().toString();
         String Col_2 = txt_Nombre_Insumo.getText().toString();
-        int Entero_1 = Integer.parseInt(txt_Can_Insumo.getText().toString());
+        String Entero_1 = (txt_Can_Insumo.getText().toString());
         String Col_3 = txt_Presentacion.getText().toString();
-        int Entero_2 = Integer.parseInt(txt_Precio_Insumo.getText().toString());
+        String Entero_2 = (txt_Precio_Insumo.getText().toString());
         Boolean Guard = manager.INSERTAR("INSUMOS", Col_1, Col_2, Col_3, Entero_1, Entero_2);
-        if (Guard = true) {
-            Toast.makeText(getContext(), "Datos Guardados Satisfactoriamente !!!",Toast.LENGTH_LONG).show();
+        if (Guard == true) {
+            Toast.makeText(getActivity(), "Datos Guardados Satisfactoriamente !!!",Toast.LENGTH_LONG).show();
         }
     }
 }

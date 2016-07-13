@@ -34,119 +34,131 @@
             android:layout_width="30dp"
             android:layout_height="30dp" />
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_marginTop="10dp"
-            style="@style/Label"
-            android:textColor="@color/color_Blanco"
-            android:text="@string/Tipo"/>
-
-        <TextView
-            style="@style/Cajas_Texto"
-            android:hint="@string/Puntos"
-            android:background="@drawable/bordes_estilo"/>
-
-        <TextView
-            android:layout_marginTop="10dp"
-            style="@style/Label"
-            android:textColor="@color/color_Blanco"
-            android:text="@string/Nombre_Insumo"/>
-
-        <TextView
-            style="@style/Cajas_Texto"
-            android:hint="@string/Puntos"
-            android:background="@drawable/bordes_estilo"/>
-
-        <TextView
-            android:layout_marginTop="10dp"
-            style="@style/Label"
-            android:textColor="@color/color_Blanco"
-            android:text="@string/Cantidad_Insumo"/>
-
-        <TextView
-            style="@style/Cajas_Texto"
-            android:hint="@string/Puntos"
-            android:background="@drawable/bordes_estilo"/>
-
-        <TextView
-            android:layout_marginTop="10dp"
-            style="@style/Label"
-            android:textColor="@color/color_Blanco"
-            android:text="@string/Presentación_Insumo"/>
-
-        <TextView
-            style="@style/Cajas_Texto"
-            android:hint="@string/Puntos"
-            android:background="@drawable/bordes_estilo"/>
-
-        <TextView
-            android:layout_marginTop="10dp"
-            style="@style/Label"
-            android:textColor="@color/color_Blanco"
-            android:text="@string/Precio_unitario"/>
-
-        <TextView
-            style="@style/Cajas_Texto"
-            android:hint="@string/Puntos"
-            android:background="@drawable/bordes_estilo"/>
-
-        <LinearLayout
+        <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:id="@+id/listView_lista"
+            android:background="@drawable/bordes_estilo"
+            android:layout_gravity="center_horizontal" />
+        <!--
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-            <Button
-                style="@style/Boton"
-                android:textSize="30dp"
-                android:text="@string/Primero"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-            <Button
-                style="@style/Boton"
-                android:text="@string/Anterior"
-                android:textSize="30dp"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-            <Button
-                style="@style/Boton"
-                android:text="@string/Siguiente"
-                android:textSize="30dp"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-            <Button
-                style="@style/Boton"
-                android:text="@string/Ultimo"
-                android:textSize="30dp"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            style="@style/Label"
+                            android:textColor="@color/color_Blanco"
+                            android:text="@string/Tipo"/>
 
-        </LinearLayout>
+                        <TextView
+                            android:id="@+id/txt_M_Tipo"
+                            style="@style/Cajas_Texto"
+                            android:hint="@string/Puntos"
+                            android:background="@drawable/bordes_estilo"/>
 
-        <Button
-            android:id="@+id/Btn_Atras"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bordes_botones"
-            android:layout_margin="5dp"
-            android:layout_gravity="right"
-            android:text="@string/Atrás"
-            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            style="@style/Label"
+                            android:textColor="@color/color_Blanco"
+                            android:text="@string/Nombre_Insumo"/>
+
+                        <TextView
+                            android:id="@+id/txt_M_Nombre"
+                            style="@style/Cajas_Texto"
+                            android:hint="@string/Puntos"
+                            android:background="@drawable/bordes_estilo"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            style="@style/Label"
+                            android:textColor="@color/color_Blanco"
+                            android:text="@string/Cantidad_Insumo"/>
+
+                        <TextView
+                            android:id="@+id/txt_M_Cant"
+                            style="@style/Cajas_Texto"
+                            android:hint="@string/Puntos"
+                            android:background="@drawable/bordes_estilo"/>
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            style="@style/Label"
+                            android:textColor="@color/color_Blanco"
+                            android:text="@string/Presentación_Insumo"/>
+
+                        <TextView
+                            android:id="@+id/txt_M_Pre"
+                            style="@style/Cajas_Texto"
+                            android:hint="@string/Puntos"
+                            android:background="@drawable/bordes_estilo"/>
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            style="@style/Label"
+                            android:textColor="@color/color_Blanco"
+                            android:text="@string/Precio_unitario"/>
+
+                        <TextView
+                            android:id="@+id/txt_M_Precio"
+                            style="@style/Cajas_Texto"
+                            android:hint="@string/Puntos"
+                            android:background="@drawable/bordes_estilo"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                style="@style/Boton"
+                                android:textSize="30dp"
+                                android:text="@string/Primero"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp"/>
+                            <Button
+                                style="@style/Boton"
+                                android:text="@string/Anterior"
+                                android:textSize="30dp"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp"/>
+                            <Button
+                                style="@style/Boton"
+                                android:text="@string/Siguiente"
+                                android:textSize="30dp"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp"/>
+                            <Button
+                                style="@style/Boton"
+                                android:text="@string/Ultimo"
+                                android:textSize="30dp"
+                                android:layout_weight="1"
+                                android:layout_margin="5dp"/>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/Btn_Atras"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bordes_botones"
+                            android:layout_margin="5dp"
+                            android:layout_gravity="right"
+                            android:text="@string/Atrás"
+                            android:layout_weight="1"/>
 
 
-    </LinearLayout>
+                    </LinearLayout>
 
-</ScrollView>
+                </ScrollView>
 
+
+        -->
 
 
     </LinearLayout>

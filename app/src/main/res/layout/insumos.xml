@@ -14,8 +14,7 @@
         android:alpha="0.7"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingTop="20dp"
-        >
+        android:paddingTop="20dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -36,7 +35,7 @@
                     android:id="@+id/txt_Tipo_Insumo"
                     style="@style/Cajas_Texto"
                     android:hint="@string/Tipo_string"
-                    android:inputType="text"
+                    android:inputType="textAutoComplete"
                     android:background="@drawable/bordes_estilo"/>
 
                 <TextView
@@ -48,7 +47,7 @@
                 <EditText
                     android:id="@+id/txt_Nombre_Insumo"
                     style="@style/Cajas_Texto"
-                    android:inputType="text"
+                    android:inputType="textAutoComplete"
                     android:hint="@string/Insumo_string"
                     android:background="@drawable/bordes_estilo"/>
 
@@ -73,6 +72,7 @@
                 <EditText
                     android:id="@+id/txt_Presentacion"
                     style="@style/Cajas_Texto"
+                    android:inputType="textAutoComplete"
                     android:hint="@string/Presentación_string"
                     android:background="@drawable/bordes_estilo"/>
 
