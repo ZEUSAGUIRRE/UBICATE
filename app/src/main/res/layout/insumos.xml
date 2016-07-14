@@ -35,7 +35,7 @@
                     android:id="@+id/txt_Tipo_Insumo"
                     style="@style/Cajas_Texto"
                     android:hint="@string/Tipo_string"
-                    android:inputType="textAutoComplete"
+                    android:inputType="textFilter"
                     android:background="@drawable/bordes_estilo"/>
 
                 <TextView
@@ -47,7 +47,7 @@
                 <EditText
                     android:id="@+id/txt_Nombre_Insumo"
                     style="@style/Cajas_Texto"
-                    android:inputType="textAutoComplete"
+                    android:inputType="textAutoCorrect"
                     android:hint="@string/Insumo_string"
                     android:background="@drawable/bordes_estilo"/>
 
@@ -72,7 +72,7 @@
                 <EditText
                     android:id="@+id/txt_Presentacion"
                     style="@style/Cajas_Texto"
-                    android:inputType="textAutoComplete"
+                    android:inputType="text"
                     android:hint="@string/Presentación_string"
                     android:background="@drawable/bordes_estilo"/>
 
@@ -85,7 +85,7 @@
                 <EditText
                     android:id="@+id/txt_Precio_Insumo"
                     style="@style/Cajas_Texto"
-                    android:inputType="numberDecimal"
+                    android:inputType="number"
                     android:background="@drawable/bordes_estilo"/>
 
                 <LinearLayout

@@ -6,7 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
+import com.example.tecnoparque4.prototipo.Clases_Objetos.CL_Insumos;
+
 import java.security.PublicKey;
+import java.util.ArrayList;
 
 public class DataBaseManager {
 //----------------------------------TABLA 1----------------------------------------------
@@ -22,9 +25,9 @@ public class DataBaseManager {
            + Dni +" integer primary key autoincrement,"
            + Tipo_Insumo+" text not null,"
            + Nombre_Insumo+ " text not null,"
-           + Can_Insumo+ " text," //integer
+           + Can_Insumo+ " int," //integer
            + Presen_Insumo +" text not null,"
-           + Precio_Insumo +" text);" ; //integer
+           + Precio_Insumo +" int);" ; //integer
 //------------------------------------Tabla 2---------------------------------------------
   private AdminSQLiteOpenHelper helper;
   private  SQLiteDatabase db;
@@ -35,7 +38,7 @@ public class DataBaseManager {
 
     }
 
-    public Boolean INSERTAR(String TABLA, String COL_1, String COL_2, String COL_3, String Entero_1, String Entero_2){
+    public Boolean INSERTAR(String TABLA, String COL_1, String COL_2, String COL_3, int Entero_1, int Entero_2){
             ContentValues valores = new ContentValues();
         Boolean Guardado=null;
         switch (TABLA){
@@ -78,15 +81,20 @@ public class DataBaseManager {
         return Modificado;
     }
 
-    public  Cursor MOSTRAR(){
-        Cursor C;
-        String[] Columnas = new String[]{Tipo_Insumo,Nombre_Insumo,Can_Insumo,Presen_Insumo,Precio_Insumo};
-         C = db.query(TABLE_INSUMOS,Columnas,null, null,null,null,null);
+    public ArrayList<CL_Insumos> GetListaInsumos(){
+        ArrayList<CL_Insumos>Lista = new ArrayList<CL_Insumos>();
+        Cursor C = db.rawQuery("SELECT "+Tipo_Insumo+","+Nombre_Insumo+","+Can_Insumo+","+Presen_Insumo+","+Precio_Insumo+" FROM "+TABLE_INSUMOS,null);
 
-        if (C!=null){
-            C.moveToFirst();
+        while (C.moveToNext()){
+        CL_Insumos m = new CL_Insumos();
+        m.setTxt_Tipo_Insumo(C.getString(0));
+        m.setTxt_Nombre_Insumo(C.getString(1));
+        m.setTxt_Can_Insumo(C.getInt(2));
+        m.setTxt_Presentacion(C.getString(3));
+        m.setTxt_Precio_Insumo(C.getInt(4));
+        Lista.add(m);
         }
-        db.close();
-        return C;
+        return Lista;
     }
+
 }

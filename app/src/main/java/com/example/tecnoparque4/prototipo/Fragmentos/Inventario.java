@@ -13,12 +13,21 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 import com.example.tecnoparque4.prototipo.Base_Datos.DataBaseManager;
+import com.example.tecnoparque4.prototipo.Clases_Objetos.ArrayAdapterCl_Insumos;
+import com.example.tecnoparque4.prototipo.Clases_Objetos.CL_Insumos;
 import com.example.tecnoparque4.prototipo.R;
+
+import java.util.ArrayList;
+
 import static com.example.tecnoparque4.prototipo.R.id.fragment_container;
 public class Inventario extends Fragment implements View.OnClickListener{
 
+    ArrayAdapterCl_Insumos adaptador;
     Button Atras;
     ListView Lista;
+    DataBaseManager manager;
+    ArrayList<CL_Insumos> List;
+    View vista;
     public Inventario() {
 
     }
@@ -27,11 +36,11 @@ public class Inventario extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-     View vista = inflater.inflate(R.layout.inventario, container, false);
+     vista = inflater.inflate(R.layout.inventario, container, false);
 //            Atras = (Button)vista.findViewById(R.id.Btn_Atras);
 //            Atras.setOnClickListener(this);
             Lista = (ListView)vista.findViewById(R.id.listView_lista);
-            Llenar_lista();
+        LLenar_Lista();
     return  vista;
     }
 
@@ -43,23 +52,18 @@ public class Inventario extends Fragment implements View.OnClickListener{
         transaction.replace(fragment_container,fragment).commit();
     }
 
+    private void LLenar_Lista(){
+        manager= new DataBaseManager(getActivity());
+        List= new ArrayList<CL_Insumos>();
+        Lista = (ListView)vista.findViewById(R.id.listView_lista);
+        List= manager.GetListaInsumos();
 
-    private void Llenar_lista(){
-        DataBaseManager manager= new DataBaseManager(getActivity());
-        Cursor cursor = manager.MOSTRAR();
-        String[] from = new String[] {
-                manager.Tipo_Insumo,
-                manager.Nombre_Insumo,
-                manager.Can_Insumo,
-                manager.Presen_Insumo,
-                manager.Precio_Insumo };
-        int[] to = new int[] {
-                R.id.text_1,
-                R.id.text_2,
-                R.id.text_3,
-                R.id.text_4,
-                R.id.text_5 };
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(getActivity(),R.layout.formato_lista,cursor,from,to);
-        Lista.setAdapter(adapter);
-   }
+        adaptador = new ArrayAdapterCl_Insumos(getActivity(),R.layout.formato_lista,List);
+        Lista.setAdapter(adaptador);
+
+    }
+
+
+
+
 }

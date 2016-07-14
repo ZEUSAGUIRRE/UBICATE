@@ -77,12 +77,17 @@ public class Insumos extends Fragment implements View.OnClickListener {
         DataBaseManager manager = new DataBaseManager(getActivity());
         String Col_1 = txt_Tipo_Insumo.getText().toString();
         String Col_2 = txt_Nombre_Insumo.getText().toString();
-        String Entero_1 = (txt_Can_Insumo.getText().toString());
+        int Entero_1 = (Integer.parseInt(String.valueOf(txt_Can_Insumo.getText())));
         String Col_3 = txt_Presentacion.getText().toString();
-        String Entero_2 = (txt_Precio_Insumo.getText().toString());
+        int Entero_2 = (Integer.parseInt(String.valueOf(txt_Precio_Insumo.getText())));
         Boolean Guard = manager.INSERTAR("INSUMOS", Col_1, Col_2, Col_3, Entero_1, Entero_2);
         if (Guard == true) {
             Toast.makeText(getActivity(), "Datos Guardados Satisfactoriamente !!!",Toast.LENGTH_LONG).show();
+            txt_Tipo_Insumo.setText(null);
+            txt_Nombre_Insumo.setText(null);
+            txt_Can_Insumo.setText(null);
+            txt_Presentacion.setText(null);
+            txt_Precio_Insumo.setText(null);
         }
     }
 }
