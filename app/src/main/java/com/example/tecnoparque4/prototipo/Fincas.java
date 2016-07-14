@@ -69,7 +69,7 @@ public class Fincas extends AppCompatActivity implements View.OnClickListener {
 //        ListView_fincas.setAdapter(adaptador);
 //    }
 
-    private void LLENAR_FINCAS(){
+    public void LLENAR_FINCAS(){
         manager= new DataBaseManager(this);
         List= new ArrayList<String>();
         List=manager.GetListaFincas();

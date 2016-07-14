@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/text_1_finca"
-        android:text="...fghfghfghfgh"
+        android:text="......................"
         android:textSize="20sp"
         android:layout_gravity="center_vertical"
         android:textColor="@color/color_negro"

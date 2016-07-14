@@ -1,6 +1,7 @@
 package com.example.tecnoparque4.prototipo;
 
 import android.app.DialogFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.example.tecnoparque4.prototipo.Base_Datos.DataBaseManager;
 
 public class My_Dialogo extends DialogFragment {
 
+    Fincas PP;
     Button Btn_guardar_finca;
     EditText txt_finca;
 
@@ -38,6 +40,9 @@ public class My_Dialogo extends DialogFragment {
 //                    }
                    txt_finca.setText(null);
                    Toast.makeText(getActivity(),R.string.Datos_Guardados,Toast.LENGTH_SHORT).show();//"Datos Guardados Satisfactoriamente !!!"
+                   dismiss();
+                   Intent intent = new Intent(getActivity(),Fincas.class);
+                   startActivity(intent);
                 }
             }
         });
