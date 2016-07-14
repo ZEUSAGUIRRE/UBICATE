@@ -31,7 +31,7 @@
             android:layout_toEndOf="@+id/imageView2" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -46,18 +46,14 @@
 
         <EditText
             android:id="@+id/txt_finca"
-            android:inputType="textPersonName"
             style="@style/Cajas_Texto"
-            android:background="@drawable/bordes_estilo"
-            android:layout_height="30dp"
-            android:layout_below="@+id/text"
+            android:inputType="textPersonName"
             android:layout_marginTop="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_marginTop="20dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_finca">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/Btn_guardar_finca"
@@ -65,13 +61,12 @@
                 android:layout_margin="5dp"
                 android:text="@string/Guardar"
                 android:layout_weight="1" />
-
-            <Button
+            <!--Button
                 android:id="@+id/Btn_cancelar_finca"
                 style="@style/Boton"
                 android:layout_margin="5dp"
                 android:text="@string/Cancelar"
-                android:layout_weight="1" />
+                android:layout_weight="1" /-->
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

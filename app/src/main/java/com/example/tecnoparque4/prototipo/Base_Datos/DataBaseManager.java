@@ -29,62 +29,63 @@ public class DataBaseManager {
            + Presen_Insumo +" text not null,"
            + Precio_Insumo +" int);" ; //integer
 //------------------------------------Tabla 2---------------------------------------------
+    public static  final String TABLE_FINCA="FINCA";
+    public static  final String NOMBRE_FINCA="NOMBRE_FINCA";
+
+    public static  final String CREATE_TABLE_FINCA = "create table "+TABLE_FINCA+" ("
+            + Dni +" integer primary key autoincrement,"
+            + NOMBRE_FINCA +" text not null);";
+
+    //------------------------------------Tabla 3---------------------------------------------
   private AdminSQLiteOpenHelper helper;
   private  SQLiteDatabase db;
 
     public DataBaseManager(Context context) {
          helper = new AdminSQLiteOpenHelper(context);
          db = helper.getWritableDatabase();
-
     }
 
     public Boolean INSERTAR(String TABLA, String COL_1, String COL_2, String COL_3, int Entero_1, int Entero_2){
             ContentValues valores = new ContentValues();
         Boolean Guardado=null;
         switch (TABLA){
-            case "INSUMOS":
-              //  db.execSQL("insert into "+TABLA+" values (null, '"+COL_1+"','"+COL_2+"',"+Entero_1+",'"+COL_3+"',"+Entero_2+")");
-                valores.put(Tipo_Insumo,COL_1);
-                valores.put(Nombre_Insumo,COL_2);
-                valores.put(Can_Insumo,Entero_1);
-                valores.put(Presen_Insumo,COL_3);
-                valores.put(Precio_Insumo,Entero_2);
-                db.insert(TABLA,null,valores);
-                Guardado = true;
-                break;
+            case TABLE_INSUMOS:
+                        valores.put(Tipo_Insumo,COL_1);
+                        valores.put(Nombre_Insumo,COL_2);
+                        valores.put(Can_Insumo,Entero_1);
+                        valores.put(Presen_Insumo,COL_3);
+                        valores.put(Precio_Insumo,Entero_2);
+                      db.insert(TABLE_INSUMOS,null,valores);
+                        Guardado = true;
+                        break;
+            case TABLE_FINCA:
+                        valores.put(NOMBRE_FINCA,COL_1);
+                        db.insert(TABLE_FINCA,null,valores);
+                        Guardado = true;
+                        break;
         }
         db.close();
     return Guardado;
     }
 
 
-    public  Boolean ELIMINAR(String TABLA,String COLUMNA,String LLAVE){
-        Boolean Eliminado=null;
-        db.delete(TABLA,COLUMNA+"=?",new String[]{LLAVE});
+//    public  Boolean ELIMINAR(String TABLA,String COLUMNA,String LLAVE){
+//        Boolean Eliminado=null;
+//        db.delete(TABLA,COLUMNA+"=?",new String[]{LLAVE});
+//        db.close();
+//        return Eliminado;
+//    }
 
-
-
-
-
-
-        db.close();
-        return Eliminado;
-    }
-
-    public  Boolean MODIFICAR(String TABLA,String COLUMNA,String LLAVE){
-        Boolean Modificado=null;
-//        db.update(TABLA,valores,COLUMNA+"=?",new String[]{LLAVE});
-
-
-
-        db.close();
-        return Modificado;
-    }
+//    public  Boolean MODIFICAR(String TABLA,String COLUMNA,String LLAVE){
+//        Boolean Modificado=null;
+////        db.update(TABLA,valores,COLUMNA+"=?",new String[]{LLAVE});
+//        db.close();
+//        return Modificado;
+//    }
 
     public ArrayList<CL_Insumos> GetListaInsumos(){
         ArrayList<CL_Insumos>Lista = new ArrayList<CL_Insumos>();
         Cursor C = db.rawQuery("SELECT "+Tipo_Insumo+","+Nombre_Insumo+","+Can_Insumo+","+Presen_Insumo+","+Precio_Insumo+" FROM "+TABLE_INSUMOS,null);
-
         while (C.moveToNext()){
         CL_Insumos m = new CL_Insumos();
         m.setTxt_Tipo_Insumo(C.getString(0));
