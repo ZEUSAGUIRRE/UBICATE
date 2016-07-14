@@ -41,19 +41,11 @@ public class ArrayAdapterCl_Insumos extends ArrayAdapter<CL_Insumos> {
         return vista;
     }
 
-
-
-
     public ArrayAdapterCl_Insumos(Context context,int resource, ArrayList<CL_Insumos> objects){
         super(context,resource,objects);
     this.cnt=context;
     this.datos=objects;
     this.resour=resource;
     }
-
-
-
-
-
 
 }

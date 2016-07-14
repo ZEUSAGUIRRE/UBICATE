@@ -47,7 +47,7 @@
         <EditText
             android:id="@+id/txt_finca"
             style="@style/Cajas_Texto"
-            android:inputType="textPersonName"
+            android:inputType="textAutoCorrect"
             android:layout_marginTop="10dp"/>
 
         <LinearLayout

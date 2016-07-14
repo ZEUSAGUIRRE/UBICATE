@@ -22,6 +22,7 @@
 
         <EditText
             style="@style/Cajas_Texto"
+            android:inputType="textAutoCorrect"
             android:hint="@string/Buscar_string"/>
 
         <ImageButton

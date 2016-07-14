@@ -57,13 +57,7 @@ public class Inventario extends Fragment implements View.OnClickListener{
         List= new ArrayList<CL_Insumos>();
         Lista = (ListView)vista.findViewById(R.id.listView_lista);
         List= manager.GetListaInsumos();
-
         adaptador = new ArrayAdapterCl_Insumos(getActivity(),R.layout.formato_lista,List);
         Lista.setAdapter(adaptador);
-
     }
-
-
-
-
 }

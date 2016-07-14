@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:padding="5dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/lote"/>
+
+    <TextView
+        android:id="@+id/text_1_finca"
+        android:text="...fghfghfghfgh"
+        android:textSize="20sp"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/color_negro"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <!--TextView
+        android:id="@+id/text_2_finca"
+        android:text="..."
+        android:gravity="center"
+        android:textColor="@color/color_negro"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="5"/>
+    <TextView
+        android:id="@+id/text_3_finca"
+        android:text="..."
+        android:gravity="center"
+        android:textColor="@color/color_negro"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="5"/-->
+
+</LinearLayout>
+</LinearLayout>

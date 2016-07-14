@@ -41,12 +41,11 @@
                     android:layout_marginBottom="10dp"/>
 
                 <Spinner
-                    style="@style/Spinner"
-                    android:id="@+id/Spineer_fincas"
-                    android:entries="@array/Fincas"
-                    android:textColor="@color/color_Blanco"
-                    android:layout_marginBottom="30dp"/>
-
+                    android:background="@drawable/bordes_botones"
+                    android:id="@+id/Spinner_fincas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
                 <Button
                     style="@style/Boton"
                     android:text="@string/Ingresar"

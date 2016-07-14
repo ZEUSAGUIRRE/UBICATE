@@ -4,15 +4,18 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.widget.Toast;
 
+import com.example.tecnoparque4.prototipo.Clases_Objetos.CL_Fincas;
 import com.example.tecnoparque4.prototipo.Clases_Objetos.CL_Insumos;
 
 import java.security.PublicKey;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DataBaseManager {
-//----------------------------------TABLA 1----------------------------------------------
+    private AdminSQLiteOpenHelper helper;
+    private  SQLiteDatabase db;
+    //----------------------------------TABLA 1----------------------------------------------
     public static  final String TABLE_INSUMOS="INSUMOS"; // Nombre de la tabla
     public static  final String Dni="Dni";
     public static  final String Tipo_Insumo="Tipo_Insumo";
@@ -20,26 +23,20 @@ public class DataBaseManager {
     public static  final String Can_Insumo="Can_Insumo";
     public static  final String Presen_Insumo="Presen_Insumo";
     public static  final String Precio_Insumo="Precio_Insumo";
-
     public static  final String CREATE_TABLE_INSUMOS = "create table "+TABLE_INSUMOS+" ("
-           + Dni +" integer primary key autoincrement,"
-           + Tipo_Insumo+" text not null,"
-           + Nombre_Insumo+ " text not null,"
-           + Can_Insumo+ " int," //integer
-           + Presen_Insumo +" text not null,"
-           + Precio_Insumo +" int);" ; //integer
+           +Dni +" integer primary key autoincrement,"+Tipo_Insumo+" text not null,"
+           +Nombre_Insumo+ " text not null,"+Can_Insumo+ " int," //integer
+           +Presen_Insumo +" text not null,"+ Precio_Insumo +" int);" ; //integer
 //------------------------------------Tabla 2---------------------------------------------
     public static  final String TABLE_FINCA="FINCA";
     public static  final String NOMBRE_FINCA="NOMBRE_FINCA";
-
+    public static  final String ESTADO_FINCA="ESTADO_FINCA";
     public static  final String CREATE_TABLE_FINCA = "create table "+TABLE_FINCA+" ("
-            + Dni +" integer primary key autoincrement,"
-            + NOMBRE_FINCA +" text not null);";
+            + Dni +" integer primary key autoincrement,"+ NOMBRE_FINCA +" text not null,"+ ESTADO_FINCA +" text not null);";
+//------------------------------------Tabla 3---------------------------------------------
 
-    //------------------------------------Tabla 3---------------------------------------------
-  private AdminSQLiteOpenHelper helper;
-  private  SQLiteDatabase db;
 
+//------------------------------------Tabla 3---------------------------------------------
     public DataBaseManager(Context context) {
          helper = new AdminSQLiteOpenHelper(context);
          db = helper.getWritableDatabase();
@@ -60,6 +57,7 @@ public class DataBaseManager {
                         break;
             case TABLE_FINCA:
                         valores.put(NOMBRE_FINCA,COL_1);
+                        valores.put(ESTADO_FINCA,COL_2);
                         db.insert(TABLE_FINCA,null,valores);
                         Guardado = true;
                         break;
@@ -67,8 +65,6 @@ public class DataBaseManager {
         db.close();
     return Guardado;
     }
-
-
 //    public  Boolean ELIMINAR(String TABLA,String COLUMNA,String LLAVE){
 //        Boolean Eliminado=null;
 //        db.delete(TABLA,COLUMNA+"=?",new String[]{LLAVE});
@@ -98,4 +94,29 @@ public class DataBaseManager {
         return Lista;
     }
 
+//    public  ArrayList<CL_Fincas> GetListaFincas(){
+//        ArrayList<CL_Fincas>Lista = new ArrayList<CL_Fincas>();
+//        Cursor C = db.rawQuery("SELECT "+Dni+","+NOMBRE_FINCA+","+ESTADO_FINCA+" FROM "+TABLE_FINCA,null);
+//        while (C.moveToNext()){
+//            CL_Fincas m = new CL_Fincas();
+//            m.setDNI(C.getInt(0));
+//            m.setNOMBRE_FINCA(C.getString(1));
+//            m.setESTADO_FINCA(C.getString(2));
+//            Lista.add(m);
+//        }
+//        return Lista;
+//    }
+
+    public  ArrayList<String> GetListaFincas(){
+        ArrayList<String>Lista = new ArrayList<String>();
+        Cursor C = db.rawQuery("SELECT "+Dni+","+NOMBRE_FINCA+","+ESTADO_FINCA+" FROM "+TABLE_FINCA,null);
+        while (C.moveToNext()){
+        String M;
+        M = String.valueOf(C.getInt(0));
+        M = M +" "+C.getString(1);
+        M = M +" "+ C.getString(2);
+        Lista.add(M);
+        }
+        return Lista;
+    }
 }

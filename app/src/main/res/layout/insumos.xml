@@ -20,95 +20,82 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
+        <LinearLayout
+            android:layout_marginTop="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
                 <TextView
-                    android:layout_marginTop="20dp"
                     style="@style/Label"
                     android:textColor="@color/color_Blanco"
                     android:text="@string/Tipo"/>
-
                 <EditText
                     android:id="@+id/txt_Tipo_Insumo"
                     style="@style/Cajas_Texto"
                     android:hint="@string/Tipo_string"
-                    android:inputType="textFilter"
+                    android:inputType="textAutoCorrect"
                     android:background="@drawable/bordes_estilo"/>
-
                 <TextView
                     android:layout_marginTop="10dp"
                     style="@style/Label"
                     android:textColor="@color/color_Blanco"
                     android:text="@string/Nombre_Insumo"/>
-
                 <EditText
                     android:id="@+id/txt_Nombre_Insumo"
                     style="@style/Cajas_Texto"
                     android:inputType="textAutoCorrect"
                     android:hint="@string/Insumo_string"
                     android:background="@drawable/bordes_estilo"/>
-
                 <TextView
                     android:layout_marginTop="10dp"
                     style="@style/Label"
                     android:textColor="@color/color_Blanco"
                     android:text="@string/Cantidad_Insumo"/>
-
                 <EditText
                     android:id="@+id/txt_Can_Insumo"
                     style="@style/Cajas_Texto"
                     android:inputType="number"
                     android:background="@drawable/bordes_estilo"/>
-
                 <TextView
                     android:layout_marginTop="10dp"
                     style="@style/Label"
                     android:textColor="@color/color_Blanco"
                     android:text="@string/Presentación_Insumo"/>
-
                 <EditText
                     android:id="@+id/txt_Presentacion"
                     style="@style/Cajas_Texto"
-                    android:inputType="text"
+                    android:inputType="textAutoCorrect"
                     android:hint="@string/Presentación_string"
                     android:background="@drawable/bordes_estilo"/>
-
                 <TextView
                     android:layout_marginTop="10dp"
                     style="@style/Label"
                     android:textColor="@color/color_Blanco"
                     android:text="@string/Precio_unitario"/>
-
                 <EditText
                     android:id="@+id/txt_Precio_Insumo"
                     style="@style/Cajas_Texto"
                     android:inputType="number"
                     android:background="@drawable/bordes_estilo"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
-
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:orientation="horizontal">
                     <Button
                         android:id="@+id/Btn_Guardar_Insumo"
                         style="@style/Boton"
                         android:layout_margin="5dp"
                         android:text="@string/Guardar"
                         android:layout_weight="1"/>
-
-                    <Button
+                    <!--Button
                         android:id="@+id/Btn_Atras"
                         style="@style/Boton"
                         android:layout_margin="5dp"
                         android:text="@string/Cancelar"
-                        android:layout_weight="1"/>
-
-                </LinearLayout>
+                        android:layout_weight="1"/-->
+         </LinearLayout>
 
             </LinearLayout>
         </ScrollView>
