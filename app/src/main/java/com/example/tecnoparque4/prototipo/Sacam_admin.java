@@ -3,6 +3,7 @@ package com.example.tecnoparque4.prototipo;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ import java.util.concurrent.ExecutionException;
 
 public class Sacam_admin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-
+    Activity_Login EE;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,12 +108,14 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
                     fragment = new Contrasena();
 
         }else if (id == R.id.Otra_Finca) {
-//                    Sacam_admin.this.finish();
                     Intent intent = new Intent(Sacam_admin.this,Fincas.class);
                     startActivity(intent);
+                    Toast.makeText(this,"Cambiar Finca !!!",Toast.LENGTH_LONG).show();
         }else if (id == R.id.Borrar_todo) {
                     fragment = new Borrar();
-
+        }else if (id == R.id.Cerrar_Sesion) {
+            Intent intent = new Intent(Sacam_admin.this,Activity_Login.class);
+            startActivity(intent);
         }else if (id == R.id.Acerca_de) {
                     fragment = new Acerca_de();
         }
@@ -122,7 +125,7 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
             drawer.closeDrawer(GravityCompat.START);
 
         }catch (Exception e){
-            Toast.makeText(this,"Cambiar Finca !!!",Toast.LENGTH_LONG).show();
+         //   Toast.makeText(this,""+e,Toast.LENGTH_LONG).show();
         }
         return true;
     }

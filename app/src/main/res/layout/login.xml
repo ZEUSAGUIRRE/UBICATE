@@ -3,63 +3,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/background"
     android:id="@+id/Ventana_login"
+    android:background="@drawable/background"
     tools:context="com.example.tecnoparque4.prototipo.Activity_Login">
 
-<ScrollView
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:alpha="0.8"
+    android:padding="20dp"
+    android:background="@color/color_Blanco">
+
+<ScrollView
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|center_horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/bordes_negro"
+        android:padding="10dp"
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/Imagen_logo"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
+            style="@style/Label"
+            android:layout_height="90dp"
             android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center"
             android:layout_marginBottom="10dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_negro"
-            android:alpha="0.8"
-            android:padding="10dp"
-            android:orientation="vertical">
 
-            <TextView
+        <TextView
                 android:id="@+id/lbl_usuario"
                 android:text="@string/Usuario"
                 android:textColor="@color/color_Blanco"
                 android:gravity="left"
-                style="@style/Label"
-                android:layout_below="@+id/Imagen_logo"
-                android:layout_marginBottom="10dp"/>
+                style="@style/Label"/>
 
             <EditText
-                android:id="@+id/txt_usuario"
                 style="@style/Cajas_Texto"
+                android:id="@+id/txt_usuario"
                 android:inputType="textAutoCorrect"
                 android:layout_marginBottom="20dp"/>
+        <requestFocus/>
 
             <TextView
                 android:id="@+id/textView"
                 android:text="@string/Contraseña"
                 android:textColor="@color/color_Blanco"
                 android:gravity="left"
-                style="@style/Label"
-                android:layout_below="@+id/Imagen_logo"
-                android:layout_marginBottom="10dp"/>
+                style="@style/Label"/>
 
             <EditText
                 android:id="@+id/txt_password"
                 style="@style/Cajas_Texto"
+                android:textColor="@color/color_negro"
                 android:inputType="textPassword"
                 android:layout_marginBottom="20dp"/>
 
@@ -67,32 +67,24 @@
                 android:id="@+id/Btn_Entrar_login"
                 style="@style/Boton"
                 android:text="@string/Ingresar"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_Guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bordes_estilo"
+                android:text="@string/Guardar_Contraseña"
+                android:checked="true"
+                android:textColor="@color/color_negro"
+                android:layout_marginBottom="20dp"/>
 
             <Button
                 android:id="@+id/Btn_Registrar"
                 style="@style/Boton"
                 android:text="@string/Registrar"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"/>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/checkBox"
-                    style="@style/Label"
-                    android:background="@color/color_Gris" />
-
-                <TextView
-                    style="@style/Label"
-                    android:textColor="@color/color_Blanco"
-                    android:text="@string/Guardar_Contraseña"
-                    android:textSize="15sp"/>
-            </LinearLayout>
-        </LinearLayout>
+                android:layout_marginBottom="5dp"/>
     </LinearLayout>
-</ScrollView>
+   </ScrollView>
+</LinearLayout>
 </LinearLayout>

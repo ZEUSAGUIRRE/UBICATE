@@ -39,6 +39,10 @@
             android:icon="@drawable/borrar"
             android:title="@string/Borrar_Todo" />
         <item
+            android:id="@+id/Cerrar_Sesion"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/Cerrar_Sesion" />
+        <item
             android:id="@+id/Acerca_de"
             android:icon="@drawable/informacion"
             android:title="@string/Acerca_de" />

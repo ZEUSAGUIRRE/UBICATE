@@ -88,6 +88,8 @@
     <string name="Cambiar_Contraseña">Cambiar Contraseña</string>
     <string name="Otra_Finca">Seleccionar Otra Finca</string>
     <string name="Borrar_Todo">Borrar Todo</string>
+    <string name="Cerrar_Sesion">Cerrar Sesion</string>
+
     <string name="Acerca_de">Acerca de SACAM</string>
     <string name="Calendario">Calendario</string>
     <string name="Guardar_Contraseña">Guardar Contraseña</string>

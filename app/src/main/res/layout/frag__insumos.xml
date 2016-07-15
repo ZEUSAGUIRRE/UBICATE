@@ -26,14 +26,6 @@
         android:layout_marginTop="5dp"
         android:src="@drawable/buscar"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
 
             <TextView
                 style="@style/Label"
@@ -82,11 +74,7 @@
 
             <Button
                 android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 style="@style/Boton"
-                android:text="@string/Agregar"
-                android:layout_weight="1"/>
-
-        </LinearLayout>
-    </ScrollView>
-
+                android:text="@string/Agregar"/>
 </LinearLayout>
