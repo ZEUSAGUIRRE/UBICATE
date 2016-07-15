@@ -8,24 +8,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.Spinner;
-
 import com.example.tecnoparque4.prototipo.Base_Datos.DataBaseManager;
 import com.example.tecnoparque4.prototipo.Clases_Objetos.ArrayAdapterCl_Fincas;
-import com.example.tecnoparque4.prototipo.Clases_Objetos.ArrayAdapterCl_Insumos;
-import com.example.tecnoparque4.prototipo.Clases_Objetos.CL_Fincas;
-import com.example.tecnoparque4.prototipo.Clases_Objetos.CL_Insumos;
 
 import java.util.ArrayList;
 
 public class Fincas extends AppCompatActivity implements View.OnClickListener {
-
     Spinner  Spinner_fincas;
     Button Btn_entrar,Btn_Crear_Finca;
     DataBaseManager manager;
     ArrayAdapterCl_Fincas adaptador;
-//    ArrayList<CL_Fincas> List;
     ArrayList<String> List;
 
     @Override
@@ -33,9 +26,7 @@ public class Fincas extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fincas);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
         Spinner_fincas =(Spinner) findViewById(R.id.Spinner_fincas);
-
         Btn_entrar =(Button)findViewById(R.id.Btn_Entrar_Admin);
         Btn_Crear_Finca =(Button)findViewById(R.id.Btn_Crear_Finca);
         Btn_entrar.setOnClickListener(this);
@@ -58,16 +49,6 @@ public class Fincas extends AppCompatActivity implements View.OnClickListener {
                 break;
         }
     }
-//-------------------llenar spinner Fincas de la base de datos-----------------
-
-//    private void LLENAR_FINCAS(){
-//        manager= new DataBaseManager(this);
-//        List= new ArrayList<CL_Fincas>();
-//        ListView_fincas = (ListView)findViewById(R.id.ListView_fincas);
-//        List= manager.GetListaFincas();
-//        adaptador = new ArrayAdapterCl_Fincas(Fincas.this,R.layout.lista_fincas,List);
-//        ListView_fincas.setAdapter(adaptador);
-//    }
 
     public void LLENAR_FINCAS(){
         manager= new DataBaseManager(this);

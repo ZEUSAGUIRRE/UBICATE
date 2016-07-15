@@ -13,18 +13,32 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.tecnoparque4.prototipo.Base_Datos.DataBaseManager;
 import com.example.tecnoparque4.prototipo.Clases_Objetos.CL_Insumos;
 import com.example.tecnoparque4.prototipo.R;
-import com.example.tecnoparque4.prototipo.Sacam_admin;
+import com.mobsandgeeks.saripaar.ValidationError;
+import com.mobsandgeeks.saripaar.Validator;
+import com.mobsandgeeks.saripaar.annotation.Max;
+import com.mobsandgeeks.saripaar.annotation.Min;
+import com.mobsandgeeks.saripaar.annotation.NotEmpty;
 
-import static com.example.tecnoparque4.prototipo.R.id.fragment_container;
-import static com.example.tecnoparque4.prototipo.R.id.layout_dialogo;
+import java.util.List;
 
 public class Insumos extends Fragment implements View.OnClickListener {
+
+    @NotEmpty(message = "Digite Tipo de Insumo")
+    private EditText txt_Tipo_Insumo;
+    @NotEmpty(message = "Digite Nombre de Insumo")
+    private EditText txt_Nombre_Insumo;
+   // @NotEmpty(message = "Digite Cantidad")
+    public EditText txt_Can_Insumo;
+    @NotEmpty(message = "Digite Cantidad")
+    private EditText    txt_Presentacion;
+   // @NotEmpty(message = "Digite Precio $")
+    public EditText   txt_Precio_Insumo;
+    Validator validator;
+
     CL_Insumos PP;
-    EditText txt_Tipo_Insumo, txt_Nombre_Insumo, txt_Can_Insumo, txt_Presentacion, txt_Precio_Insumo;
     Button Btn_Guardar_Insumo;
     View vista;
     //Button Atras;
@@ -44,9 +58,6 @@ public class Insumos extends Fragment implements View.OnClickListener {
         txt_Precio_Insumo = (EditText) vista.findViewById(R.id.txt_Precio_Insumo);
         // Botones
         Btn_Guardar_Insumo = (Button) vista.findViewById(R.id.Btn_Guardar_Insumo);
-      //  Atras = (Button) vista.findViewById(R.id.Btn_Atras);
-        // Acciones de los Botones
-//        Atras.setOnClickListener(this);
         Btn_Guardar_Insumo.setOnClickListener(this);
         return vista;
     }
@@ -55,14 +66,8 @@ public class Insumos extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.Btn_Guardar_Insumo:
-                Guardar_Insumo();
+                validator.validate();
                 break;
-//            case R.id.Btn_Atras:
-//                FragmentManager fragmentManager = getFragmentManager();
-//                FragmentTransaction transaction = fragmentManager.beginTransaction();
-//                Fragment fragment = new Fragment_Base();
-//                transaction.replace(fragment_container, fragment).commit();
-//                break;
         }
     }
 
@@ -82,6 +87,26 @@ public class Insumos extends Fragment implements View.OnClickListener {
             txt_Can_Insumo.setText(null);
             txt_Presentacion.setText(null);
             txt_Precio_Insumo.setText(null);
+        }
+    }
+
+   // @Override
+    public void onValidationSucceeded() {
+    Guardar_Insumo();
+    Toast.makeText(getActivity(), "Datos ingresados correctamente", Toast.LENGTH_SHORT).show();
+    }
+
+//    @Override
+    public void onValidationFailed(List<ValidationError> errors){
+        for (ValidationError error:errors){
+            View view = error.getView();
+            String message = error.getCollatedErrorMessage(getActivity());
+            if (view instanceof EditText){
+                ((EditText)view).setError(message);
+            }
+            else {
+                Toast.makeText(getActivity(),message,Toast.LENGTH_LONG).show();
+            }
         }
     }
 }
