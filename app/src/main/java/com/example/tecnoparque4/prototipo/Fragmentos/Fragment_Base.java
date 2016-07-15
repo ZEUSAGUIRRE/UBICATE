@@ -8,13 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import com.example.tecnoparque4.prototipo.R;
 import static com.example.tecnoparque4.prototipo.R.id.fragment_container;
 
 public class Fragment_Base extends Fragment implements View.OnClickListener {
 
     LinearLayout Lotes,Insumos,Inventario;
-
+    TextView Nombre_Finca;
     public Fragment_Base() {
 
     }
@@ -27,6 +29,7 @@ public class Fragment_Base extends Fragment implements View.OnClickListener {
         Lotes = ( LinearLayout)vista.findViewById(R.id.Layout_lotes);
         Insumos = ( LinearLayout)vista.findViewById(R.id.Layout_insumos);
         Inventario = ( LinearLayout)vista.findViewById(R.id.Layout_Inventario);
+        Nombre_Finca =(TextView)vista.findViewById(R.id.txt_nombre_finca);
 
         Lotes.setOnClickListener(this);
         Insumos.setOnClickListener(this);

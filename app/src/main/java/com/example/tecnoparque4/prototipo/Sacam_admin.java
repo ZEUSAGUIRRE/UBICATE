@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -13,6 +14,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tecnoparque4.prototipo.Fragmentos.Acerca_de;
@@ -44,7 +46,19 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
         Fragment_Base fragmentBase = new Fragment_Base();
         FragmentTransaction fragmentTransaction= getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container,fragmentBase).commit();
+        cargar_finca();
+    }
 
+
+    public String cargar_finca(){
+        Bundle extras = getIntent().getExtras();
+        String Nombre = extras.getString("Dato");
+        SharedPreferences mis_preferences= getSharedPreferences("PreferenciasUsuario",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor;
+        editor = mis_preferences.edit();
+        editor.putString("USUARIO",Nombre);
+        editor.commit();
+    return Nombre;
     }
 
     @Override

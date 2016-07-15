@@ -39,6 +39,8 @@ public class Fincas extends AppCompatActivity implements View.OnClickListener {
            case R.id.Btn_Entrar_Admin:
                //Fincas.this.finish();
                Intent intent = new Intent(Fincas.this,Sacam_admin.class);
+           String Dato= Spinner_fincas.getOnItemSelectedListener().toString();
+               intent.putExtra("Nombre_finca",Dato);
                startActivity(intent);
                break;
             case R.id.Btn_Crear_Finca:
