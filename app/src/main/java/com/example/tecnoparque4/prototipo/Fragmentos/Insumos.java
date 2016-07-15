@@ -66,7 +66,8 @@ public class Insumos extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.Btn_Guardar_Insumo:
-                validator.validate();
+               Guardar_Insumo();
+                // validator.validate();
                 break;
         }
     }

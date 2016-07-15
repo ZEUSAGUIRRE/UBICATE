@@ -31,6 +31,10 @@
             android:icon="@drawable/contrasena"
             android:title="@string/Cambiar_Contraseña" />
         <item
+            android:id="@+id/Otra_Finca"
+            android:icon="@drawable/lote"
+            android:title="@string/Otra_Finca" />
+        <item
             android:id="@+id/Borrar_todo"
             android:icon="@drawable/borrar"
             android:title="@string/Borrar_Todo" />

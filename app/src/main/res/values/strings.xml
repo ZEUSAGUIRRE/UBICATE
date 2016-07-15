@@ -86,6 +86,7 @@
     <string name="Reporte_Gastos">Reporte de Gastos</string>
     <string name="Ganancias_Perdidas">Ganancias y Pérdidas</string>
     <string name="Cambiar_Contraseña">Cambiar Contraseña</string>
+    <string name="Otra_Finca">Seleccionar Otra Finca</string>
     <string name="Borrar_Todo">Borrar Todo</string>
     <string name="Acerca_de">Acerca de SACAM</string>
     <string name="Calendario">Calendario</string>
@@ -104,6 +105,7 @@
     <string name="Descripcion_Gasto">Descripción del Gasto</string>
     <string name="Otro_gasto">Servicios, Comida etc...</string>
     <string name="Precio">Precio</string>
+    <string name="Registrar">Registrarse</string>
 
 
 </resources>

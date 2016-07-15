@@ -3,6 +3,7 @@ package com.example.tecnoparque4.prototipo;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -11,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.tecnoparque4.prototipo.Fragmentos.Acerca_de;
 import com.example.tecnoparque4.prototipo.Fragmentos.Actividades;
@@ -22,6 +24,8 @@ import com.example.tecnoparque4.prototipo.Fragmentos.Ganancias;
 import com.example.tecnoparque4.prototipo.Fragmentos.Gastos;
 import com.example.tecnoparque4.prototipo.Fragmentos.Inconvenientes;
 import com.example.tecnoparque4.prototipo.Fragmentos.Recordatorios;
+
+import java.util.concurrent.ExecutionException;
 
 
 public class Sacam_admin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -102,16 +106,24 @@ public class Sacam_admin extends AppCompatActivity implements NavigationView.OnN
         } else if (id == R.id.Cambiar_Contraseña) {
                     fragment = new Contrasena();
 
+        }else if (id == R.id.Otra_Finca) {
+//                    Sacam_admin.this.finish();
+                    Intent intent = new Intent(Sacam_admin.this,Fincas.class);
+                    startActivity(intent);
         }else if (id == R.id.Borrar_todo) {
                     fragment = new Borrar();
 
         }else if (id == R.id.Acerca_de) {
                     fragment = new Acerca_de();
         }
-        transaction.replace(R.id.fragment_container,fragment).commit();
+        try {
+            transaction.replace(R.id.fragment_container,fragment).commit();
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        }catch (Exception e){
+            Toast.makeText(this,"Cambiar Finca !!!",Toast.LENGTH_LONG).show();
+        }
         return true;
     }
 

@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.Spinner;
 import com.example.tecnoparque4.prototipo.Base_Datos.DataBaseManager;
 import com.example.tecnoparque4.prototipo.Clases_Objetos.ArrayAdapterCl_Fincas;
-
 import java.util.ArrayList;
 
 public class Fincas extends AppCompatActivity implements View.OnClickListener {
@@ -38,7 +37,7 @@ public class Fincas extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
            case R.id.Btn_Entrar_Admin:
-               Fincas.this.finish();
+               //Fincas.this.finish();
                Intent intent = new Intent(Fincas.this,Sacam_admin.class);
                startActivity(intent);
                break;
@@ -54,6 +53,7 @@ public class Fincas extends AppCompatActivity implements View.OnClickListener {
         manager= new DataBaseManager(this);
         List= new ArrayList<String>();
         List=manager.GetListaFincas();
+ //       List=manager.GetListaADMIN();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.lista_fincas,R.id.text_1_finca,List);
         Spinner_fincas.setAdapter(adapter);
     }

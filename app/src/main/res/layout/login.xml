@@ -70,6 +70,12 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"/>
 
+            <Button
+                android:id="@+id/Btn_Registrar"
+                style="@style/Boton"
+                android:text="@string/Registrar"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

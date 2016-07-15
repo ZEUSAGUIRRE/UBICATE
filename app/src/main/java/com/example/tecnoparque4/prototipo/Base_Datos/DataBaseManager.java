@@ -34,8 +34,10 @@ public class DataBaseManager {
     public static  final String CREATE_TABLE_FINCA = "create table "+TABLE_FINCA+" ("
             + Dni +" integer primary key autoincrement,"+ NOMBRE_FINCA +" text not null,"+ ESTADO_FINCA +" text not null);";
 //------------------------------------Tabla 3---------------------------------------------
-
-
+    public static  final String TABLE_ADMIN="ADMIN"; // Nombre de la tabla
+    public static  final String USUARIO="USUARIO";
+    public static  final String CONTRASENA="CONTRASENA";
+    public static  final String CREATE_TABLE_ADMIN = "create table "+TABLE_ADMIN+" ("+USUARIO+" TEXT primary key,"+ CONTRASENA +" text not null);";
 //------------------------------------Tabla 3---------------------------------------------
     public DataBaseManager(Context context) {
          helper = new AdminSQLiteOpenHelper(context);
@@ -46,13 +48,19 @@ public class DataBaseManager {
             ContentValues valores = new ContentValues();
         Boolean Guardado=null;
         switch (TABLA){
+            case TABLE_ADMIN:
+                valores.put(USUARIO,COL_1);
+                valores.put(CONTRASENA,COL_2);
+                db.insert(TABLE_ADMIN,null,valores);
+                Guardado = true;
+                break;
             case TABLE_INSUMOS:
                         valores.put(Tipo_Insumo,COL_1);
                         valores.put(Nombre_Insumo,COL_2);
                         valores.put(Can_Insumo,Entero_1);
                         valores.put(Presen_Insumo,COL_3);
                         valores.put(Precio_Insumo,Entero_2);
-                      db.insert(TABLE_INSUMOS,null,valores);
+                        db.insert(TABLE_INSUMOS,null,valores);
                         Guardado = true;
                         break;
             case TABLE_FINCA:
@@ -94,19 +102,6 @@ public class DataBaseManager {
         return Lista;
     }
 
-//    public  ArrayList<CL_Fincas> GetListaFincas(){
-//        ArrayList<CL_Fincas>Lista = new ArrayList<CL_Fincas>();
-//        Cursor C = db.rawQuery("SELECT "+Dni+","+NOMBRE_FINCA+","+ESTADO_FINCA+" FROM "+TABLE_FINCA,null);
-//        while (C.moveToNext()){
-//            CL_Fincas m = new CL_Fincas();
-//            m.setDNI(C.getInt(0));
-//            m.setNOMBRE_FINCA(C.getString(1));
-//            m.setESTADO_FINCA(C.getString(2));
-//            Lista.add(m);
-//        }
-//        return Lista;
-//    }
-
     public  ArrayList<String> GetListaFincas(){
         ArrayList<String>Lista = new ArrayList<String>();
         Cursor C = db.rawQuery("SELECT "+Dni+","+NOMBRE_FINCA+","+ESTADO_FINCA+" FROM "+TABLE_FINCA,null);
@@ -116,6 +111,27 @@ public class DataBaseManager {
         M = M +" "+C.getString(1);
         M = M +" "+ C.getString(2);
         Lista.add(M);
+        }
+        return Lista;
+    }
+
+    public boolean LOGIN(String USU, String CONTRA){
+        boolean ENTRAR=false;
+        Cursor C = db.rawQuery("SELECT "+USUARIO+","+CONTRASENA+" FROM "+TABLE_ADMIN+" WHERE "+USUARIO+"='"+USU+"' AND "+CONTRASENA+"='"+CONTRA+"'",null);
+        if (C.moveToFirst()){
+            ENTRAR=true;
+        }
+        return ENTRAR;
+    }
+
+    public  ArrayList<String> GetListaADMIN(){
+        ArrayList<String>Lista = new ArrayList<String>();
+        Cursor C = db.rawQuery("SELECT "+USUARIO+","+CONTRASENA+" FROM "+TABLE_ADMIN,null);
+        while (C.moveToNext()){
+            String M="";
+            M = M +" "+C.getString(0);;
+            M = M +" "+C.getString(1);
+            Lista.add(M);
         }
         return Lista;
     }
