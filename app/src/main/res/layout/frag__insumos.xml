@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_negro"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context="com.example.tecnoparque4.prototipo.Fragmentos.Frag_Insumos">
+
+    <TextView
+        style="@style/Label"
+        android:text="@string/Buscar"
+        android:alpha="1"
+        android:textColor="@color/color_Blanco" />
+
+    <EditText
+        android:alpha="1"
+        style="@style/Cajas_Texto"
+        android:hint="@string/Digite_Nombre_Insumo"/>
+
+    <ImageView
+        android:alpha="1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/buscar"/>
+
+
+            <TextView
+                style="@style/Label"
+                android:textColor="@color/color_Blanco"
+                android:text="@string/Tipo"/>
+
+            <TextView
+                style="@style/Cajas_Texto"
+                android:hint="@string/Tipo_string"
+                android:inputType="text"
+                android:background="@drawable/bordes_estilo"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                style="@style/Label"
+                android:textColor="@color/color_Blanco"
+                android:text="@string/Cantidad_Insumo"/>
+
+            <EditText
+                style="@style/Cajas_Texto"
+                android:inputType="number"
+                android:background="@drawable/bordes_estilo"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                style="@style/Label"
+                android:textColor="@color/color_Blanco"
+                android:text="@string/Presentación_Insumo"/>
+
+            <EditText
+                style="@style/Cajas_Texto"
+                android:inputType="text"
+                android:hint="@string/Presentación_string"
+                android:background="@drawable/bordes_estilo"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                style="@style/Label"
+                android:textColor="@color/color_Blanco"
+                android:text="@string/Precio_unitario"/>
+
+            <EditText
+                style="@style/Cajas_Texto"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bordes_estilo"/>
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                style="@style/Boton"
+                android:text="@string/Agregar"/>
+</LinearLayout>

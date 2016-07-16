@@ -1,0 +1,70 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.tecnoparque4.prototipo.Registrarse">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:alpha="0.6"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/Registrar"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/color_negro">
+
+        <TextView
+            style="@style/Label"
+            android:id="@+id/text"
+            android:text="@string/Usuario"
+            android:textColor="@color/color_Blanco"/>
+
+        <EditText
+            android:id="@+id/txt_nuevo_usu"
+            style="@style/Cajas_Texto"
+            android:inputType="textAutoCorrect"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            style="@style/Label"
+            android:id="@+id/text1"
+            android:text="@string/Contraseña"
+            android:textColor="@color/color_Blanco"/>
+
+        <EditText
+            android:id="@+id/txt_nuevo_contra"
+            style="@style/Cajas_Texto"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/Btn_Nuevo_usu"
+                android:layout_marginTop="10dp"
+                style="@style/Boton"
+                android:text="@string/Guardar"
+                android:layout_weight="1" />
+
+    </LinearLayout>
+    </LinearLayout>
