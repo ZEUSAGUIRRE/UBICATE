@@ -1,4 +1,5 @@
 <application>
+  <component name="BuiltInServerOptions" builtInServerPort="63346" />
   <component name="CvsApplicationLevelConfiguration">
     <option name="EXT_CONFIGURATION">
       <value>
@@ -49,7 +50,9 @@
   </component>
   <component name="DebuggerSettings">
     <option name="TRACING_FILTERS_ENABLED" value="true" />
+    <option name="DEBUGGER_TRANSPORT" value="1" />
     <option name="FORCE_CLASSIC_VM" value="true" />
+    <option name="DISABLE_JIT" value="true" />
     <option name="SKIP_SYNTHETIC_METHODS" value="true" />
     <option name="SKIP_CLASSLOADERS" value="true" />
     <option name="RUN_HOTSWAP_AFTER_COMPILE" value="RunHotswapAsk" />
